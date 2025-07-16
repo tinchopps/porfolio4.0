@@ -1,0 +1,280 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "Full Stack Developer | Systems Student | IT Educator",
+    "location": "General Rodríguez, Buenos Aires, Argentina",
+    "description": "Passionate about technology, education, and continuous learning. I create innovative solutions and share knowledge through teaching and development.",
+    "cta": "Get in touch",
+    "viewWork": "View my work"
+  },
+  "about": {
+    "title": "About Me",
+    "whoAmI": {
+      "title": "Who am I?"
+    },
+    "intro": {
+      "paragraph1": "I'm Martín Lucero, a creator of digital experiences, Web and Mobile Developer, and passionate about data analysis and artificial intelligence. From General Rodríguez, Buenos Aires, I transform ideas into technological solutions that empower businesses and improve people's lives.",
+      "paragraph2": "With solid knowledge in Python, HTML, CSS, JavaScript and SQL, I develop responsive web applications, automation scripts and data analysis with a practical approach. I also have experience in interface design, digital marketing and search engine optimization (SEO).",
+      "paragraph3": "I'm currently training in Data Science and Artificial Intelligence, while participating in real projects and continuing to grow as an IT professional."
+    },
+    "specialties": {
+      "title": "Specialties",
+      "items": {
+        "frontend": {
+          "title": "Frontend Development",
+          "description": "HTML, CSS, JavaScript, Responsive Web Design"
+        },
+        "dataAnalysis": {
+          "title": "Data Analysis",
+          "description": "Python, SQL, data visualization"
+        },
+        "seoMarketing": {
+          "title": "SEO & Digital Marketing",
+          "description": "Search engine optimization and AI-powered marketing"
+        }
+      }
+    },
+    "education": {
+      "title": "Academic Background",
+      "status": {
+        "current": "In Progress",
+        "completed": "Completed"
+      },
+      "items": {
+        "systemsEngineering": {
+          "title": "Bachelor's in Information Systems",
+          "institution": "Universidad Nacional de Luján",
+          "period": "2022 to present",
+          "description": "Focus on development, programming, management and data analysis."
+        },
+        "teachingDegree": {
+          "title": "Teaching Degree in Computer Science",
+          "institution": "Universidad Pedagógica Nacional (UNIPE)",
+          "period": "2024 to present",
+          "description": "Specialized pedagogical training in computer science education."
+        },
+        "aiDiploma": {
+          "title": "Diploma in Generative Artificial Intelligence",
+          "institution": "Google & Universidad Nacional del Salvador",
+          "period": "2024",
+          "description": "Practical training in generative AI, GCP, BigQuery and Gemini."
+        }
+      }
+    },
+    "cta": {
+      "viewCV": "View my CV"
+    },
+    "description": "I'm a dedicated full-stack developer and systems engineering student with a passion for creating meaningful technology solutions. My journey combines formal education with hands-on experience in web development, artificial intelligence, and educational technology.",
+    "experience": "My experience spans from building responsive web applications to developing AI-powered chatbots for academic institutions. I believe in the power of technology to transform education and am committed to bridging the gap between complex technical concepts and practical applications.",
+    "teaching": "As an IT educator, I've had the privilege of teaching programming fundamentals and web development to aspiring developers. This experience has not only enhanced my communication skills but also deepened my understanding of technology from multiple perspectives.",
+    "philosophy": "I approach every project with curiosity, attention to detail, and a commitment to quality. Whether it's developing a full-stack application or mentoring students, I strive to create solutions that are both technically sound and user-friendly."
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "keyResponsibilities": "Key Responsibilities",
+    "keyResults": "Key Results",
+    "skillsDeveloped": "Skills Developed",
+    "stats": {
+      "yearsExperience": "Years of Experience",
+      "projectsCompleted": "Projects Completed",
+      "industriesSectors": "Industry Sectors"
+    },
+    "items": {
+      "fullstack-freelance": {
+        "role": "Full Stack Developer & Digital Consultant",
+        "company": "Independent Projects & Collaborations",
+        "period": "2023 – Present",
+        "location": "Freelance",
+        "description": "Design and development of custom web solutions with focus on user experience and responsiveness, managing the complete project lifecycle from conceptualization to implementation.",
+        "responsibilities": [
+          "Web application development using HTML, CSS, JavaScript, React and Node.js",
+          "Comprehensive project lifecycle management",
+          "User experience (UX) optimization and responsiveness",
+          "Implementation of dynamic functionalities and interactive systems"
+        ],
+        "results": [
+          "Functional ecommerce for local hardware store with catalog, cart and order management",
+          "Web platform for automotive workshop with online appointment system",
+          "Interactive web portfolios for professionals, artists and students",
+          "Digital process optimization for General Rodríguez Health Department"
+        ],
+        "skills": ["React", "Node.js", "JavaScript", "HTML/CSS", "UX/UI Design", "Project Management"]
+      },
+      "interpreter": {
+        "role": "Bilingual Interpreter & Content Curator",
+        "company": "Language Line Solutions & Musixmatch",
+        "period": "2021 – 2023",
+        "location": "Remote",
+        "description": "Simultaneous and consecutive Spanish–English interpretation in high-responsibility environments, along with editing and synchronization of musical content under international standards.",
+        "responsibilities": [
+          "Simultaneous and consecutive interpretation in medical, legal and public service environments",
+          "Editing and synchronization of song lyrics in Spanish and English",
+          "Management of sensitive conversations with linguistic precision",
+          "Compliance with international standards and delivery deadlines"
+        ],
+        "skills": ["Bilingual Communication", "Active Listening", "Pressure Management", "Attention to Detail", "Remote Work"]
+      },
+      "educator": {
+        "role": "Technology Educator & Mentor",
+        "company": "General Rodríguez",
+        "period": "2019 – Present",
+        "location": "Volunteer & Private",
+        "description": "Teaching in digital literacy and programming mentorship, promoting digital inclusion and technical skills development in diverse learning groups.",
+        "responsibilities": [
+          "Basic computer education for older adults",
+          "Backend programming mentorship (Python, databases, PHP)",
+          "Development of adapted pedagogical content",
+          "Guidance in real projects and best practices"
+        ],
+        "skills": ["Digital Pedagogy", "Python", "Databases", "Technical Leadership", "Effective Communication"]
+      },
+      "entrepreneur": {
+        "role": "Commercial Entrepreneur",
+        "company": "Personal Venture",
+        "period": "2017 – 2021",
+        "location": "General Rodríguez, Buenos Aires",
+        "description": "Comprehensive management of commercial venture in construction materials, developing business and commercial skills in a competitive environment.",
+        "responsibilities": [
+          "Comprehensive sales cycle management",
+          "Technical advisory and personalized attention",
+          "Stock, pricing and distribution logistics management",
+          "Development of commercial relationships and after-sales"
+        ],
+        "skills": ["Commercial Development", "Negotiation", "Stock Management", "Customer Service", "Operational Autonomy"]
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "inProgressMessage": "This project is being restructured. Changes coming soon. Thank you!",
+    "modalTitle": "Project Update",
+    "items": {
+      "chatbot": {
+        "title": "Academic Management Chatbot",
+        "description": "AI-powered chatbot for UNLu that assists students with academic queries, course information, and administrative procedures using natural language processing.",
+        "tech": ["Python", "FastAPI", "OpenAI", "PostgreSQL", "Docker"]
+      },
+      "trivia": {
+        "title": "One Piece Trivia API",
+        "description": "RESTful API featuring comprehensive One Piece trivia with character information, story arcs, and interactive quiz functionality.",
+        "tech": ["Node.js", "Express", "MongoDB", "JWT", "Swagger"]
+      },
+      "ecommerce": {
+        "title": "Full Stack Ecommerce",
+        "description": "Complete e-commerce platform with user authentication, product management, shopping cart, and payment integration.",
+        "tech": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"]
+      },
+      "countdown": {
+        "title": "Hozier Countdown Fan Page",
+        "description": "Interactive fan website featuring countdown timers, discography, news updates, and community features for Hozier fans.",
+        "tech": ["React", "TypeScript", "Tailwind", "Firebase"]
+      },
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "description": "This portfolio website showcasing my work, skills, and journey as a developer with multi-language support and modern design.",
+        "tech": ["React", "TypeScript", "Tailwind", "i18next", "Vite"]
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Databases",
+      "ai": "AI & Data",
+      "tools": "Tools & Others"
+    }
+  },
+  "blog": {
+    "title": "Blog & Insights",
+    "searchPlaceholder": "Search articles...",
+    "readMore": "Read more",
+    "minutes": "min read",
+    "inProgressMessage": "This blog post is being updated. New content coming soon. Thank you!",
+    "modalTitle": "Content Update",
+    "noResults": "No articles found",
+    "adjustFilters": "Try adjusting your search or filter criteria",
+    "categories": {
+      "technical": "Technical",
+      "personal": "Personal",
+      "education": "Education",
+      "career": "Career",
+      "trends": "Trends"
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "description": "I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology and education.",
+    "getInTouch": "Get in Touch",
+    "connectWithMe": "Connect with me",
+    "sendMessage": "Send Message",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message"
+    },
+    "info": {
+      "email": "Email",
+      "location": "Location",
+      "availability": "Available for opportunities"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with React, TypeScript & Tailwind CSS",
+    "description": "Full Stack Developer passionate about creating innovative solutions and sharing knowledge.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "builtWith": "Built With"
+  },
+  "moreAbout": {
+    "title": "More about me",
+    "quote": {
+      "text": "I believe in more human technology: that empowers people, not replaces them.",
+      "author": "– Martín Lucero"
+    },
+    "philosophy": "I'm passionate about continuous learning, collaborative work and solving real problems with technology. Beyond code, I seek to generate impact, share knowledge and build a more just, open and digital world.",
+    "values": {
+      "continuousLearning": "Continuous learning",
+      "growthMindset": "Growth mindset",
+      "teamwork": "Teamwork",
+      "practicalCreativity": "Practical creativity"
+    },
+    "testimonials": {
+      "title": "What they say about my work",
+      "testimonial1": {
+        "text": "Martín demonstrated great technical ability and creativity in developing our project. His focus on user experience is exceptional.",
+        "name": "Juan Pérez",
+        "role": "Product Manager"
+      },
+      "testimonial2": {
+        "text": "His passion for teaching and technology is reflected in every project. Always willing to share knowledge and help the team.",
+        "name": "Ana Martínez",
+        "role": "Tech Lead"
+      }
+    },
+    "cta": {
+      "title": "Want to collaborate on a project or just chat about ideas?",
+      "description": "I'm always open to new conversations, interesting projects and mutual learning opportunities.",
+      "button": "Send me a message",
+      "responseTime": "I respond in less than 24 hours"
+    }
+  },
+  "modal": {
+    "gotIt": "Got it"
+  }
+}

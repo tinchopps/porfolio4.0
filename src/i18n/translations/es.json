@@ -1,0 +1,280 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de mi",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Desarrollador Full Stack | Estudiante de Sistemas | Educador IT",
+    "location": "General Rodríguez, Buenos Aires, Argentina",
+    "description": "Apasionado por la tecnología, la educación y el aprendizaje continuo. Creo soluciones innovadoras y comparto conocimiento a través de la enseñanza y el desarrollo.",
+    "cta": "Contactarme",
+    "viewWork": "Ver mi trabajo"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "whoAmI": {
+      "title": "¿Quién soy?"
+    },
+    "intro": {
+      "paragraph1": "Soy Martín Lucero, un creador de experiencias digitales, Desarrollador Web y Mobile, y apasionado por el análisis de datos y la inteligencia artificial. Desde General Rodríguez, Buenos Aires, transformo ideas en soluciones tecnológicas que potencian negocios y mejoran la vida de las personas.",
+      "paragraph2": "Con conocimientos sólidos en Python, HTML, CSS, JavaScript y SQL, desarrollo aplicaciones web responsivas, scripts de automatización y análisis de datos con enfoque práctico. También cuento con experiencia en diseño de interfaces, marketing digital y optimización para buscadores (SEO).",
+      "paragraph3": "Actualmente me estoy formando en Ciencia de Datos e Inteligencia Artificial, mientras participo en proyectos reales y sigo creciendo como profesional IT."
+    },
+    "specialties": {
+      "title": "Especialidades",
+      "items": {
+        "frontend": {
+          "title": "Desarrollo Frontend",
+          "description": "HTML, CSS, JavaScript, Diseño Web Responsivo"
+        },
+        "dataAnalysis": {
+          "title": "Análisis de Datos",
+          "description": "Python, SQL, visualización de datos"
+        },
+        "seoMarketing": {
+          "title": "SEO & Marketing Digital",
+          "description": "Optimización de motores de búsqueda y marketing con IA"
+        }
+      }
+    },
+    "education": {
+      "title": "Formación Académica",
+      "status": {
+        "current": "En curso",
+        "completed": "Completado"
+      },
+      "items": {
+        "systemsEngineering": {
+          "title": "Licenciatura en Sistemas de Información",
+          "institution": "Universidad Nacional de Luján",
+          "period": "2022 a la actualidad",
+          "description": "Enfoque en desarrollo, programación, gestión y análisis de datos."
+        },
+        "teachingDegree": {
+          "title": "Profesorado en Informática",
+          "institution": "Universidad Pedagógica Nacional (UNIPE)",
+          "period": "2024 a la actualidad",
+          "description": "Formación pedagógica especializada en educación informática."
+        },
+        "aiDiploma": {
+          "title": "Diplomatura en Inteligencia Artificial Generativa",
+          "institution": "Google & Universidad Nacional del Salvador",
+          "period": "2024",
+          "description": "Formación práctica en IA generativa, GCP, BigQuery y Gemini."
+        }
+      }
+    },
+    "cta": {
+      "viewCV": "Ver mi CV"
+    },
+    "description": "Soy un desarrollador full-stack dedicado y estudiante de ingeniería en sistemas con pasión por crear soluciones tecnológicas significativas. Mi trayectoria combina educación formal con experiencia práctica en desarrollo web, inteligencia artificial y tecnología educativa.",
+    "experience": "Mi experiencia abarca desde la construcción de aplicaciones web responsivas hasta el desarrollo de chatbots con IA para instituciones académicas. Creo en el poder de la tecnología para transformar la educación y estoy comprometido a cerrar la brecha entre conceptos técnicos complejos y aplicaciones prácticas.",
+    "teaching": "Como educador IT, he tenido el privilegio de enseñar fundamentos de programación y desarrollo web a desarrolladores aspirantes. Esta experiencia no solo ha mejorado mis habilidades de comunicación, sino que también ha profundizado mi comprensión de la tecnología desde múltiples perspectivas.",
+    "philosophy": "Abordo cada proyecto con curiosidad, atención al detalle y compromiso con la calidad. Ya sea desarrollando una aplicación full-stack o mentoreando estudiantes, me esfuerzo por crear soluciones que sean técnicamente sólidas y fáciles de usar."
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "keyResponsibilities": "Responsabilidades Clave",
+    "keyResults": "Resultados Destacados",
+    "skillsDeveloped": "Habilidades Desarrolladas",
+    "stats": {
+      "yearsExperience": "Años de Experiencia",
+      "projectsCompleted": "Proyectos Completados",
+      "industriesSectors": "Sectores de Industria"
+    },
+    "items": {
+      "fullstack-freelance": {
+        "role": "Desarrollador Full Stack & Consultor Digital",
+        "company": "Proyectos Independientes & Colaboraciones",
+        "period": "2023 – Actualidad",
+        "location": "Freelance",
+        "description": "Diseño y desarrollo de soluciones web personalizadas con foco en experiencia de usuario y responsividad, gestionando el ciclo completo del proyecto desde la conceptualización hasta la implementación.",
+        "responsibilities": [
+          "Desarrollo de aplicaciones web utilizando HTML, CSS, JavaScript, React y Node.js",
+          "Gestión integral del ciclo de vida del proyecto",
+          "Optimización de experiencia de usuario (UX) y responsividad",
+          "Implementación de funcionalidades dinámicas y sistemas interactivos"
+        ],
+        "results": [
+          "Ecommerce funcional para corralón local con catálogo, carrito y gestión de pedidos",
+          "Plataforma web para mecánica automotriz con sistema de turnos online",
+          "Portafolios web interactivos para profesionales, artistas y estudiantes",
+          "Optimización de procesos digitales para Secretaría de Salud de General Rodríguez"
+        ],
+        "skills": ["React", "Node.js", "JavaScript", "HTML/CSS", "UX/UI Design", "Project Management"]
+      },
+      "interpreter": {
+        "role": "Intérprete Bilingüe & Curador de Contenido",
+        "company": "Language Line Solutions & Musixmatch",
+        "period": "2021 – 2023",
+        "location": "Remoto",
+        "description": "Interpretación simultánea y consecutiva Español–Inglés en entornos de alta responsabilidad, junto con edición y sincronización de contenido musical bajo estándares internacionales.",
+        "responsibilities": [
+          "Interpretación simultánea y consecutiva en entornos médicos, legales y servicios públicos",
+          "Edición y sincronización de letras de canciones en español e inglés",
+          "Gestión de conversaciones sensibles con precisión lingüística",
+          "Cumplimiento de estándares internacionales y plazos de entrega"
+        ],
+        "skills": ["Comunicación Bilingüe", "Escucha Activa", "Gestión bajo Presión", "Atención al Detalle", "Trabajo Remoto"]
+      },
+      "educator": {
+        "role": "Educador & Mentor en Tecnología",
+        "company": "General Rodríguez",
+        "period": "2019 – Actualidad",
+        "location": "Voluntariado & Particular",
+        "description": "Docencia en alfabetización digital y mentoría en programación, promoviendo la inclusión digital y el desarrollo de habilidades técnicas en diversos grupos de aprendizaje.",
+        "responsibilities": [
+          "Enseñanza de informática básica a adultos mayores",
+          "Mentoría en programación backend (Python, bases de datos, PHP)",
+          "Desarrollo de contenidos pedagógicos adaptados",
+          "Acompañamiento en proyectos reales y buenas prácticas"
+        ],
+        "skills": ["Pedagogía Digital", "Python", "Bases de Datos", "Liderazgo Técnico", "Comunicación Efectiva"]
+      },
+      "entrepreneur": {
+        "role": "Emprendedor Comercial",
+        "company": "Emprendimiento Personal",
+        "period": "2017 – 2021",
+        "location": "General Rodríguez, Buenos Aires",
+        "description": "Gestión integral de emprendimiento comercial en materiales de construcción, desarrollando habilidades empresariales y comerciales en un entorno competitivo.",
+        "responsibilities": [
+          "Gestión integral del ciclo de ventas",
+          "Asesoramiento técnico y atención personalizada",
+          "Manejo de stock, precios y logística de distribución",
+          "Desarrollo de relaciones comerciales y postventa"
+        ],
+        "skills": ["Desarrollo Comercial", "Negociación", "Gestión de Stock", "Atención al Cliente", "Autonomía Operativa"]
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "viewProject": "Ver Proyecto",
+    "viewCode": "Ver Código",
+    "inProgressMessage": "Este proyecto está siendo reestructurado. Cambios próximamente. ¡Gracias!",
+    "modalTitle": "Actualización de Proyecto",
+    "items": {
+      "chatbot": {
+        "title": "Chatbot de Gestión Académica",
+        "description": "Chatbot con IA para UNLu que asiste a estudiantes con consultas académicas, información de cursos y procedimientos administrativos usando procesamiento de lenguaje natural.",
+        "tech": ["Python", "FastAPI", "OpenAI", "PostgreSQL", "Docker"]
+      },
+      "trivia": {
+        "title": "API de Trivia One Piece",
+        "description": "API RESTful con trivia completa de One Piece incluyendo información de personajes, arcos argumentales y funcionalidad de quiz interactivo.",
+        "tech": ["Node.js", "Express", "MongoDB", "JWT", "Swagger"]
+      },
+      "ecommerce": {
+        "title": "Ecommerce Full Stack",
+        "description": "Plataforma de e-commerce completa con autenticación de usuarios, gestión de productos, carrito de compras e integración de pagos.",
+        "tech": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"]
+      },
+      "countdown": {
+        "title": "Página Fan de Hozier",
+        "description": "Sitio web interactivo para fans con temporizadores de cuenta regresiva, discografía, actualizaciones de noticias y características de comunidad.",
+        "tech": ["React", "TypeScript", "Tailwind", "Firebase"]
+      },
+      "portfolio": {
+        "title": "Portfolio Personal",
+        "description": "Este sitio web portfolio que muestra mi trabajo, habilidades y trayectoria como desarrollador con soporte multiidioma y diseño moderno.",
+        "tech": ["React", "TypeScript", "Tailwind", "i18next", "Vite"]
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Bases de Datos",
+      "ai": "IA y Datos",
+      "tools": "Herramientas y Otros"
+    }
+  },
+  "blog": {
+    "title": "Blog e Ideas",
+    "searchPlaceholder": "Buscar artículos...",
+    "readMore": "Leer más",
+    "minutes": "min de lectura",
+    "inProgressMessage": "Este artículo está siendo actualizado. Nuevo contenido próximamente. ¡Gracias!",
+    "modalTitle": "Actualización de Contenido",
+    "noResults": "No se encontraron artículos",
+    "adjustFilters": "Intenta ajustar tu búsqueda o criterios de filtro",
+    "categories": {
+      "technical": "Técnico",
+      "personal": "Personal",
+      "education": "Educación",
+      "career": "Carrera",
+      "trends": "Tendencias"
+    }
+  },
+  "contact": {
+    "title": "Conectemos",
+    "description": "Siempre estoy abierto a discutir nuevas oportunidades, proyectos interesantes, o simplemente conversar sobre tecnología y educación.",
+    "getInTouch": "Ponte en Contacto",
+    "connectWithMe": "Conecta conmigo",
+    "sendMessage": "Enviar Mensaje",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Email",
+      "subject": "Asunto",
+      "message": "Tu Mensaje",
+      "send": "Enviar Mensaje"
+    },
+    "info": {
+      "email": "Email",
+      "location": "Ubicación",
+      "availability": "Disponible para oportunidades"
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built": "Construido con React, TypeScript y Tailwind CSS",
+    "description": "Desarrollador Full Stack apasionado por crear soluciones innovadoras y compartir conocimiento.",
+    "quickLinks": "Enlaces Rápidos",
+    "contact": "Contacto",
+    "builtWith": "Construido Con"
+  },
+  "moreAbout": {
+    "title": "Más sobre mí",
+    "quote": {
+      "text": "Creo en una tecnología más humana: que potencie a las personas, no que las reemplace.",
+      "author": "– Martín Lucero"
+    },
+    "philosophy": "Me apasiona el aprendizaje continuo, el trabajo colaborativo y resolver problemas reales con tecnología. Más allá del código, busco generar impacto, compartir conocimiento y construir un mundo más justo, abierto y digital.",
+    "values": {
+      "continuousLearning": "Formación constante",
+      "growthMindset": "Mentalidad de crecimiento",
+      "teamwork": "Trabajo en equipo",
+      "practicalCreativity": "Creatividad práctica"
+    },
+    "testimonials": {
+      "title": "Lo que dicen sobre mi trabajo",
+      "testimonial1": {
+        "text": "Martín demostró gran capacidad técnica y creatividad en el desarrollo de nuestro proyecto. Su enfoque en la experiencia del usuario es excepcional.",
+        "name": "Juan Pérez",
+        "role": "Product Manager"
+      },
+      "testimonial2": {
+        "text": "Su pasión por la enseñanza y la tecnología se refleja en cada proyecto. Siempre dispuesto a compartir conocimiento y ayudar al equipo.",
+        "name": "Ana Martínez",
+        "role": "Tech Lead"
+      }
+    },
+    "cta": {
+      "title": "¿Querés colaborar en un proyecto o simplemente charlar sobre ideas?",
+      "description": "Siempre estoy abierto a nuevas conversaciones, proyectos interesantes y oportunidades de aprendizaje mutuo.",
+      "button": "Enviame un mensaje",
+      "responseTime": "Respondo en menos de 24hs"
+    }
+  },
+  "modal": {
+    "gotIt": "Entendido"
+  }
+}
