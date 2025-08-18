@@ -6,244 +6,28 @@ const Skills: React.FC = () => {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('frontend');
 
-  const skillsData = {
-    frontend: [
-      {
-        title: 'Especialización en Programación Web',
-        institution: 'CFP 401',
-        date: '2024',
-        duration: '6 meses',
-        skills: ['HTML5', 'CSS3', 'JavaScript ES6+', 'Responsive Design'],
-        type: 'specialization'
-      },
-      {
-        title: 'Programación Frontend',
-        institution: 'Digital House',
-        date: '2023',
-        duration: '4 meses',
-        skills: ['React', 'Redux', 'Webpack', 'SASS'],
-        type: 'course'
-      },
-      {
-        title: 'Desarrollo Web Frontend',
-        institution: 'Potrero Digital',
-        date: '2023',
-        duration: '3 meses',
-        skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-        type: 'course'
-      },
-      {
-        title: 'Responsive Web Design',
-        institution: 'FreeCodeCamp',
-        date: '2022',
-        duration: '300 horas',
-        skills: ['CSS Grid', 'Flexbox', 'Media Queries', 'Accessibility'],
-        type: 'certification'
-      },
-      {
-        title: 'Bootstrap Framework',
-        institution: 'FreeCodeCamp',
-        date: '2022',
-        duration: '50 horas',
-        skills: ['Bootstrap 5', 'Component System', 'Grid System'],
-        type: 'certification'
-      },
-      {
-        title: 'JavaScript Algorithms',
-        institution: 'SoloLearn',
-        date: '2022',
-        duration: '40 horas',
-        skills: ['ES6+', 'DOM Manipulation', 'Async/Await'],
-        type: 'certification'
-      }
-    ],
-    backend: [
-      {
-        title: 'Node.js Development',
-        institution: 'Digital House',
-        date: '2023',
-        duration: '3 meses',
-        skills: ['Express.js', 'REST APIs', 'Middleware', 'Authentication'],
-        type: 'course'
-      },
-      {
-        title: 'Python Programming',
-        institution: 'SoloLearn',
-        date: '2023',
-        duration: '60 horas',
-        skills: ['Python 3', 'OOP', 'Libraries', 'Data Structures'],
-        type: 'certification'
-      },
-      {
-        title: 'PHP Web Development',
-        institution: 'FreeCodeCamp',
-        date: '2022',
-        duration: '80 horas',
-        skills: ['PHP 8', 'MySQL Integration', 'MVC Pattern'],
-        type: 'certification'
-      },
-      {
-        title: 'FastAPI Framework',
-        institution: 'Autodidacta',
-        date: '2024',
-        duration: 'Proyecto personal',
-        skills: ['FastAPI', 'Pydantic', 'Async Programming'],
-        type: 'project'
-      }
-    ],
-    database: [
-      {
-        title: 'PostgreSQL Administration',
-        institution: 'Digital House',
-        date: '2023',
-        duration: '2 meses',
-        skills: ['SQL Queries', 'Database Design', 'Performance Tuning'],
-        type: 'course'
-      },
-      {
-        title: 'MongoDB Fundamentals',
-        institution: 'SoloLearn',
-        date: '2023',
-        duration: '40 horas',
-        skills: ['NoSQL', 'Aggregation', 'Indexing'],
-        type: 'certification'
-      },
-      {
-        title: 'SQL Database Design',
-        institution: 'FreeCodeCamp',
-        date: '2022',
-        duration: '100 horas',
-        skills: ['Relational Design', 'Normalization', 'Complex Queries'],
-        type: 'certification'
-      },
-      {
-        title: 'Firebase Integration',
-        institution: 'Proyecto Chatbot UNLu',
-        date: '2024',
-        duration: 'Implementación práctica',
-        skills: ['Firestore', 'Real-time Database', 'Authentication'],
-        type: 'project'
-      }
-    ],
-    ai: [
-      {
-        title: 'Diplomatura en IA Generativa',
-        institution: 'Google & Universidad Nacional del Salvador',
-        date: '2024',
-        duration: '6 meses',
-        skills: ['Gemini AI', 'BigQuery', 'GCP', 'Prompt Engineering'],
-        type: 'diploma'
-      },
-      {
-        title: 'Machine Learning Fundamentals',
-        institution: 'SoloLearn',
-        date: '2024',
-        duration: '50 horas',
-        skills: ['Scikit-learn', 'Pandas', 'NumPy', 'Data Preprocessing'],
-        type: 'certification'
-      },
-      {
-        title: 'OpenAI API Integration',
-        institution: 'Proyecto Chatbot Académico',
-        date: '2024',
-        duration: 'Implementación práctica',
-        skills: ['GPT-4', 'Embeddings', 'Fine-tuning', 'RAG'],
-        type: 'project'
-      },
-      {
-        title: 'Natural Language Processing',
-        institution: 'Autodidacta',
-        date: '2024',
-        duration: 'Estudio continuo',
-        skills: ['NLTK', 'spaCy', 'Text Analysis', 'Sentiment Analysis'],
-        type: 'self-study'
-      }
-    ],
-    devops: [
-      {
-        title: 'Docker Containerization',
-        institution: 'Digital House',
-        date: '2023',
-        duration: '1 mes',
-        skills: ['Docker', 'Docker Compose', 'Container Orchestration'],
-        type: 'course'
-      },
-      {
-        title: 'AWS Cloud Fundamentals',
-        institution: 'SoloLearn',
-        date: '2023',
-        duration: '30 horas',
-        skills: ['EC2', 'S3', 'Lambda', 'CloudFormation'],
-        type: 'certification'
-      },
-      {
-        title: 'Git Version Control',
-        institution: 'FreeCodeCamp',
-        date: '2022',
-        duration: '20 horas',
-        skills: ['Git', 'GitHub', 'Branching', 'Collaboration'],
-        type: 'certification'
-      },
-      {
-        title: 'CI/CD Pipelines',
-        institution: 'Proyecto Personal',
-        date: '2024',
-        duration: 'Implementación práctica',
-        skills: ['GitHub Actions', 'Automated Testing', 'Deployment'],
-        type: 'project'
-      }
-    ],
-    tools: [
-      {
-        title: 'Soporte Informático',
-        institution: 'Potrero Digital & Cisco',
-        date: '2023',
-        duration: '4 meses',
-        skills: ['Hardware', 'Redes', 'Troubleshooting', 'Help Desk'],
-        type: 'course'
-      },
-      {
-        title: 'Argentina Programa',
-        institution: 'Gobierno Nacional',
-        date: '2022',
-        duration: '6 meses',
-        skills: ['Fundamentos IT', 'Lógica de Programación', 'Metodologías'],
-        type: 'program'
-      },
-      {
-        title: 'Visual Studio Code',
-        institution: 'Uso profesional',
-        date: 'Continuo',
-        duration: 'Herramienta principal',
-        skills: ['Extensions', 'Debugging', 'Git Integration'],
-        type: 'tool'
-      },
-      {
-        title: 'Postman API Testing',
-        institution: 'Uso profesional',
-        date: 'Continuo',
-        duration: 'Testing APIs',
-        skills: ['API Testing', 'Collections', 'Automation'],
-        type: 'tool'
-      },
-      {
-        title: 'Figma Design',
-        institution: 'Autodidacta',
-        date: '2023',
-        duration: 'Diseño UI/UX',
-        skills: ['Prototyping', 'Component Design', 'Collaboration'],
-        type: 'tool'
-      }
-    ]
+  // Obtener los datos de habilidades desde i18n
+  const skillsData = t('skills.data', { returnObjects: true }) as {
+    [key: string]: Array<{
+      title: string;
+      institution: string;
+      date: string;
+      duration: string;
+      skills: string[];
+      type: string;
+    }>
   };
 
+  // Obtener el array de resumen desde i18n
+  const summary = t('skills.summary', { returnObjects: true }) as string[];
+
   const categories = [
-    { key: 'frontend', icon: Code, label: 'Frontend' },
-    { key: 'backend', icon: Database, label: 'Backend' },
-    { key: 'database', icon: Database, label: 'Bases de Datos' },
-    { key: 'ai', icon: Brain, label: 'IA y Datos' },
+    { key: 'frontend', icon: Code, label: t('skills.categories.frontend') },
+    { key: 'backend', icon: Database, label: t('skills.categories.backend') },
+    { key: 'database', icon: Database, label: t('skills.categories.database') },
+    { key: 'ai', icon: Brain, label: t('skills.categories.ai') },
     { key: 'devops', icon: Monitor, label: 'DevOps' },
-    { key: 'tools', icon: Wrench, label: 'Herramientas' }
+    { key: 'tools', icon: Wrench, label: t('skills.categories.tools') }
   ];
 
   const getTypeIcon = (type: string) => {
@@ -369,18 +153,22 @@ const Skills: React.FC = () => {
 
           {/* Summary Stats */}
           <div className="mt-16 grid md:grid-cols-3 gap-6">
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">25+</div>
-              <div className="text-gray-300">Certificaciones</div>
-            </div>
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">500+</div>
-              <div className="text-gray-300">Horas de Estudio</div>
-            </div>
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">10+</div>
-              <div className="text-gray-300">Proyectos Aplicados</div>
-            </div>
+            {summary.map((item, index) => {
+              const parts = item.split(' ');
+              const value = parts[0];
+              const label = parts.slice(1).join(' ');
+              
+              return (
+                <div key={index} className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center">
+                  <div className={`text-3xl font-bold mb-2 ${
+                    index === 0 ? 'text-purple-400' : index === 1 ? 'text-blue-400' : 'text-green-400'
+                  }`}>
+                    {value}
+                  </div>
+                  <div className="text-gray-300">{label}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

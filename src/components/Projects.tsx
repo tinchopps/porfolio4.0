@@ -9,18 +9,22 @@ const Projects: React.FC = () => {
   const [modalMessage, setModalMessage] = React.useState('');
 
   const projects = [
+
+        {
+      id: 'trivia',
+      image: '/op.png',
+      status: 'in-progress',
+      available: true,
+      externalUrl: 'https://github.com/tinchopps/Trivia_One_Piece_api/blob/main/questions.json',
+      githubUrl: 'https://github.com/tinchopps/Trivia_One_Piece_api'
+    },
     {
       id: 'chatbot',
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
       status: 'in-progress',
       available: false
     },
-    {
-      id: 'trivia',
-      image: 'https://images.pexels.com/photos/5240543/pexels-photo-5240543.jpeg?auto=compress&cs=tinysrgb&w=600',
-      status: 'in-progress',
-      available: false
-    },
+
     {
       id: 'ecommerce',
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -31,19 +35,18 @@ const Projects: React.FC = () => {
       id: 'countdown',
       image: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600',
       status: 'completed',
-      available: true
-    },
-    {
-      id: 'portfolio',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600',
-      status: 'completed',
-      available: true
+      available: true,
+      externalUrl: 'https://hoziercountdown.netlify.app/',
+      githubUrl: 'https://github.com/tinchopps/hosierCountdown'
     }
   ];
 
   const handleProjectClick = (project: typeof projects[0]) => {
     if (project.available) {
-      // Handle navigation for available projects
+        window.open(project.externalUrl, '_blank', 'noopener,noreferrer');
+        return;
+      
+      // Handle navigation for other available projects
       console.log('Navigate to project:', project.id);
     } else {
       // Show modal for in-progress projects
@@ -54,7 +57,12 @@ const Projects: React.FC = () => {
 
   const handleViewCode = (project: typeof projects[0]) => {
     if (project.available) {
-      // Handle GitHub navigation for available projects
+      // Si es el proyecto de Hozier, abrir el link de GitHub
+      if (project.id === 'countdown' && project.githubUrl) {
+        window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+        return;
+      }
+      // Handle GitHub navigation for other available projects
       console.log('Navigate to GitHub:', project.id);
     } else {
       // Show modal for in-progress projects

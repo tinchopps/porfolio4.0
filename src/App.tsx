@@ -71,11 +71,11 @@ function App() {
       }
       
       .light .bg-gray-900 {
-        background: #f8f9fc !important;
+        background: #eee4e4ff !important;
       }
       
       .light .bg-gray-800 {
-        background: #ffffff !important;
+        background: #f3eeeeff !important;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
         border: 1px solid #E0E0E0 !important;
       }
@@ -89,7 +89,7 @@ function App() {
       }
       
       .light .text-gray-400 {
-        color: #4A5568 !important;
+        color: #2d2f34ff !important;
       }
       
       .light .border-gray-700 {
@@ -173,7 +173,7 @@ function App() {
         bottom: 125%;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #1F2937;
+        background-color: #1f3723ff;
         color: white;
         text-align: center;
         border-radius: 8px;
@@ -272,6 +272,10 @@ function App() {
           transform: scale(1.1);
         }
       }
+      
+.light .bg-hero-gradient {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 50%, #fdf6e3 100%) !important;
+}
     `;
     document.head.appendChild(style);
     

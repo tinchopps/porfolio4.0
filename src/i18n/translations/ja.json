@@ -22,24 +22,24 @@
       "title": "私は誰ですか？"
     },
     "intro": {
-      "paragraph1": "私はマルティン・ルセロです。デジタル体験のクリエイター、ウェブ・モバイル開発者、そしてデータ分析と人工知能に情熱を注いでいます。ブエノスアイレスのヘネラル・ロドリゲスから、ビジネスを強化し人々の生活を向上させる技術ソリューションにアイデアを変換しています。",
-      "paragraph2": "Python、HTML、CSS、JavaScript、SQLの確実な知識を持ち、レスポンシブウェブアプリケーション、自動化スクリプト、実用的なアプローチでのデータ分析を開発しています。また、インターフェースデザイン、デジタルマーケティング、検索エンジン最適化（SEO）の経験もあります。",
-      "paragraph3": "現在、データサイエンスと人工知能の分野で学習を続けながら、実際のプロジェクトに参加し、ITプロフェッショナルとして成長し続けています。"
+      "paragraph1": "私はマルティン・ルセロ、デジタル教育者、Web・モバイル開発者であり、データ分析、人工知能、ITサポートに情熱を持っています。ブエノスアイレス州ヘネラル・ロドリゲスから、人々に教え、支援し、ポジティブな影響を与える技術ソリューションへとアイデアを変換しています。成長は木々のように時間がかかり、しっかりした根と変化に開かれた枝が必要だと自然からインスピレーションを得ています。",
+      "paragraph2": "Python、HTML、CSS、JavaScript、SQL、Reactの確かな知識を持ち、実践的なアプローチでレスポンシブなWebアプリケーション、API、自動化スクリプト、データの可視化を開発しています。また、テクニカルサポートやヘルプデスクの経験もあり、トラブルシューティング、リモートサポート、環境構築、ソフトウェアインストール、ユーザーとの明確なコミュニケーションも得意です。インターフェースデザイン、デジタルマーケティング、SEO最適化も私の強みです。",
+      "paragraph3": "現在、国立教育大学で教員養成課程を学びつつ、ルハン国立大学で情報システム学士号の取得を目指し、GoogleとUNDELと共にAIディプロマにも参加しています。同時に、実際の開発や教育プロジェクトに携わり、個別指導や教育ツールの作成、他者のデジタルの道をサポートしています。私の目標は明確です。テクノロジーがよりアクセスしやすく、役立ち、人間的なものとなり、学びや協働、自然環境への敬意と調和することです。"
     },
     "specialties": {
       "title": "専門分野",
       "items": {
         "frontend": {
-          "title": "フロントエンド開発",
-          "description": "HTML、CSS、JavaScript、レスポンシブウェブデザイン"
+          "title": "ウェブプログラミングスペシャリスト",
+          "description": "HTML、CSS、JavaScript、Reactによるレスポンシブなインターフェースの設計と開発。アクセシブルでモダン、ユーザー中心のアプローチ。"
         },
         "dataAnalysis": {
-          "title": "データ分析",
-          "description": "Python、SQL、データ可視化"
+          "title": "人工知能＆データサイエンス",
+          "description": "PythonとSQLによるデータのモデリング、可視化、分析。生成AI、GCP、BigQuery ML、スマートツールによる自動化。"
         },
         "seoMarketing": {
-          "title": "SEO・デジタルマーケティング",
-          "description": "検索エンジン最適化とAIを活用したマーケティング"
+          "title": "ITサポート＆テクノロジー教育",
+          "description": "技術的な問題解決、リモートサポート、個別指導。Git、VS Code、クラウドプラットフォーム、デジタル学習体験の設計などの技術を活用。"
         }
       }
     },
@@ -76,7 +76,30 @@
     "description": "私は意味のある技術ソリューションの創造に情熱を注ぐ、献身的なフルスタック開発者およびシステム工学の学生です。私の旅は、正式な教育とウェブ開発、人工知能、教育技術での実践的経験を組み合わせています。",
     "experience": "私の経験は、レスポンシブウェブアプリケーションの構築から学術機関向けのAI搭載チャットボットの開発まで幅広く及びます。技術が教育を変革する力を信じており、複雑な技術概念と実用的なアプリケーションの橋渡しをすることにコミットしています。",
     "teaching": "IT教育者として、プログラミングの基礎とウェブ開発を志望開発者に教える特権を得てきました。この経験は私のコミュニケーションスキルを向上させただけでなく、複数の視点から技術への理解を深めました。",
-    "philosophy": "私はすべてのプロジェクトに好奇心、細部への注意、品質へのコミットメントを持って取り組みます。フルスタックアプリケーションの開発でも学生の指導でも、技術的に健全でユーザーフレンドリーなソリューションの創造に努めています。"
+    "philosophy": "私はすべてのプロジェクトに好奇心、細部への注意、品質へのコミットメントを持って取り組みます。フルスタックアプリケーションの開発でも学生の指導でも、技術的に健全でユーザーフレンドリーなソリューションの創造に努めています。",
+    "photoData": [
+      {
+        "url": "src/horizon.png",
+        "location": "ブエノスアイレス、アルゼンチン",
+        "date": "2025",
+        "description": "地平線を見つめる―ビジョンと未来を象徴"
+      },
+      {
+        "url": "src/abrazo.jpg",
+        "location": "ブエノスアイレス、アルゼンチン",
+        "date": "2024",
+        "description": "木を抱きしめる―自然とのつながりと成長を象徴"
+      },
+      {
+        "url": "src/martin_lechuzas.jpg",
+        "location": "ブエノスアイレス、アルゼンチン",
+        "date": "2025",
+        "description": "フクロウと出会う―知恵と地域の動物とのつながりを象徴"
+      }
+    ],
+    "photoPanelLabels": ["写真", "枚中", "説明:"],
+    "photoPanelIcons": ["📍", "📅"],
+    "photoPanelHints": ["矢印ボタンをクリックして写真を切り替える"]
   },
   "experience": {
     "title": "職歴",
@@ -178,7 +201,9 @@
       "countdown": {
         "title": "ホジエファンページ",
         "description": "カウントダウンタイマー、ディスコグラフィー、ニュース更新、コミュニティ機能を備えたホジエファン向けのインタラクティブウェブサイト。",
-        "tech": ["React", "TypeScript", "Tailwind", "Firebase"]
+        "tech": ["React", "TypeScript", "Tailwind", "Firebase"],
+        "externalUrl": "https://hoziercountdown.netlify.app/",
+        "githubUrl": "https://github.com/tinchopps/hosierCountdown"
       },
       "portfolio": {
         "title": "個人ポートフォリオ",
@@ -195,6 +220,257 @@
       "database": "データベース",
       "ai": "AIとデータ",
       "tools": "ツールとその他"
+    },
+    "summary": [
+      "25+ 認定資格",
+      "500+ 学習時間",
+      "10+ 実践プロジェクト"
+    ],
+    "data": {
+      "frontend": [
+        {
+          "title": "ウェブプログラミング専門",
+          "institution": "CFP 401",
+          "date": "2024",
+          "duration": "9ヶ月",
+          "skills": ["HTML5", "CSS3", "JavaScript ES6+", "レスポンシブデザイン", "React", "PHP", "MySQL"],
+          "type": "specialization"
+        },
+        {
+          "title": "フロントエンドプログラミング",
+          "institution": "Digital House, Potrero Digital",
+          "date": "2023",
+          "duration": "4ヶ月",
+          "skills": ["React", "Redux", "Webpack", "SASS", "TypeScript", "Bootstrap"],
+          "type": "certification"
+        },
+        {
+          "title": "レスポンシブウェブデザイン",
+          "institution": "FreeCodeCamp",
+          "date": "2022",
+          "duration": "300時間",
+          "skills": ["CSS Grid", "Flexbox", "メディアクエリ", "アクセシビリティ"],
+          "type": "certification"
+        },
+        {
+          "title": "Bootstrapフレームワーク",
+          "institution": "FreeCodeCamp",
+          "date": "2022",
+          "duration": "50時間",
+          "skills": ["Bootstrap 5", "コンポーネントシステム", "グリッドシステム"],
+          "type": "certification"
+        },
+        {
+          "title": "JavaScriptアルゴリズム",
+          "institution": "SoloLearn",
+          "date": "2022",
+          "duration": "40時間",
+          "skills": ["ES6+", "DOM操作", "Async/Await"],
+          "type": "certification"
+        },
+        {
+          "title": "ウェブ開発",
+          "institution": "SoloLearn",
+          "date": "2022",
+          "duration": "40時間",
+          "skills": ["ES6+", "DOM操作", "Async/Await"],
+          "type": "certification"
+        }
+      ],
+      "backend": [
+        {
+          "title": "Node.js開発",
+          "institution": "Digital House",
+          "date": "2023",
+          "duration": "3ヶ月",
+          "skills": ["Express.js", "REST API", "ミドルウェア", "認証"],
+          "type": "course"
+        },
+        {
+          "title": "バックエンド開発",
+          "institution": "Potrero Digital",
+          "date": "2025",
+          "duration": "4ヶ月",
+          "skills": ["PHP", "Laravel", "MySQL", "API"],
+          "type": "certification"
+        },
+        {
+          "title": "Pythonプログラミング",
+          "institution": "SoloLearn",
+          "date": "2023",
+          "duration": "90時間",
+          "skills": ["Python 3", "OOP", "ライブラリ", "データ構造"],
+          "type": "certification"
+        },
+        {
+          "title": "バックエンドライブラリ",
+          "institution": "FreeCodeCamp",
+          "date": "2023",
+          "duration": "300時間",
+          "skills": ["Node.js", "Express.js", "MongoDB", "API"],
+          "type": "certification"
+        },
+        {
+          "title": "FastAPIフレームワーク",
+          "institution": "独学",
+          "date": "2024",
+          "duration": "個人プロジェクト",
+          "skills": ["FastAPI", "Pydantic", "非同期プログラミング"],
+          "type": "project"
+        }
+      ],
+      "database": [
+        {
+          "title": "PostgreSQL管理",
+          "institution": "Digital House",
+          "date": "2023",
+          "duration": "2ヶ月",
+          "skills": ["SQLクエリ", "データベース設計", "パフォーマンスチューニング"],
+          "type": "course"
+        },
+        {
+          "title": "MongoDB基礎",
+          "institution": "SoloLearn",
+          "date": "2023",
+          "duration": "40時間",
+          "skills": ["NoSQL", "集約", "インデックス"],
+          "type": "certification"
+        },
+        {
+          "title": "SQLデータベース設計",
+          "institution": "FreeCodeCamp",
+          "date": "2022",
+          "duration": "100時間",
+          "skills": ["リレーショナル設計", "正規化", "複雑なクエリ"],
+          "type": "certification"
+        },
+        {
+          "title": "Firebase統合",
+          "institution": "UNLuチャットボットプロジェクト",
+          "date": "2024",
+          "duration": "実践実装",
+          "skills": ["Firestore", "リアルタイムデータベース", "認証"],
+          "type": "project"
+        }
+      ],
+      "ai": [
+        {
+          "title": "生成AIディプロマ",
+          "institution": "Google・デルタ国立大学",
+          "date": "2024",
+          "duration": "6ヶ月",
+          "skills": ["Gemini AI", "BigQuery", "GCP", "プロンプトエンジニアリング"],
+          "type": "diploma"
+        },
+        {
+          "title": "プロンプトエンジニアリング",
+          "institution": "SoloLearn",
+          "date": "2024",
+          "duration": "9時間",
+          "skills": ["プロンプト設計", "AIモデル", "ユースケース"],
+          "type": "certification"
+        },
+        {
+          "title": "A/Bテストと実験",
+          "institution": "SoloLearn",
+          "date": "2025",
+          "duration": "20時間",
+          "skills": ["実験設計", "統計解析", "データ駆動意思決定"],
+          "type": "certification"
+        },
+        {
+          "title": "OpenAI API統合",
+          "institution": "学術チャットボットプロジェクト",
+          "date": "2024",
+          "duration": "実践実装",
+          "skills": ["GPT-4", "埋め込み", "ファインチューニング", "RAG"],
+          "type": "project"
+        },
+        {
+          "title": "自然言語処理",
+          "institution": "独学",
+          "date": "2024",
+          "duration": "継続学習",
+          "skills": ["NLTK", "spaCy", "テキスト分析", "感情分析"],
+          "type": "self-study"
+        }
+      ],
+      "devops": [
+        {
+          "title": "Dockerコンテナ化",
+          "institution": "Digital House",
+          "date": "2023",
+          "duration": "1ヶ月",
+          "skills": ["Docker", "Docker Compose", "コンテナオーケストレーション"],
+          "type": "course"
+        },
+        {
+          "title": "AWSクラウド基礎",
+          "institution": "AWSトレーニング",
+          "date": "2023",
+          "duration": "30時間",
+          "skills": ["EC2", "S3", "Lambda", "CloudFormation"],
+          "type": "certification"
+        },
+        {
+          "title": "Gitバージョン管理",
+          "institution": "FreeCodeCamp",
+          "date": "2022",
+          "duration": "20時間",
+          "skills": ["Git", "GitHub", "ブランチ", "コラボレーション"],
+          "type": "certification"
+        },
+        {
+          "title": "CI/CDパイプライン",
+          "institution": "個人プロジェクト",
+          "date": "2024",
+          "duration": "実践実装",
+          "skills": ["GitHub Actions", "自動テスト", "デプロイ"],
+          "type": "project"
+        }
+      ],
+      "tools": [
+        {
+          "title": "ITサポート",
+          "institution": "Potrero Digital & Cisco",
+          "date": "2023",
+          "duration": "4ヶ月",
+          "skills": ["ハードウェア", "ネットワーク", "トラブルシューティング", "ヘルプデスク"],
+          "type": "course"
+        },
+        {
+          "title": "Argentina Programa",
+          "institution": "国立政府",
+          "date": "2022",
+          "duration": "6ヶ月",
+          "skills": ["IT基礎", "プログラミングロジック", "メソドロジー"],
+          "type": "program"
+        },
+        {
+          "title": "Visual Studio Code",
+          "institution": "プロフェッショナル利用",
+          "date": "継続中",
+          "duration": "主なツール",
+          "skills": ["拡張機能", "デバッグ", "Git統合"],
+          "type": "tool"
+        },
+        {
+          "title": "Postman APIテスト",
+          "institution": "プロフェッショナル利用",
+          "date": "継続中",
+          "duration": "APIテスト",
+          "skills": ["APIテスト", "コレクション", "自動化"],
+          "type": "tool"
+        },
+        {
+          "title": "Figmaデザイン",
+          "institution": "独学",
+          "date": "2023",
+          "duration": "UI/UXデザイン",
+          "skills": ["プロトタイピング", "コンポーネント設計", "コラボレーション"],
+          "type": "tool"
+        }
+      ]
     }
   },
   "blog": {

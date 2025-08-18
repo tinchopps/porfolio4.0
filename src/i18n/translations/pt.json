@@ -22,24 +22,24 @@
       "title": "Quem sou eu?"
     },
     "intro": {
-      "paragraph1": "Sou Martín Lucero, um criador de experiências digitais, Desenvolvedor Web e Mobile, e apaixonado por análise de dados e inteligência artificial. De General Rodríguez, Buenos Aires, transformo ideias em soluções tecnológicas que potencializam negócios e melhoram a vida das pessoas.",
-      "paragraph2": "Com conhecimentos sólidos em Python, HTML, CSS, JavaScript e SQL, desenvolvo aplicações web responsivas, scripts de automação e análise de dados com foco prático. Também tenho experiência em design de interfaces, marketing digital e otimização para motores de busca (SEO).",
-      "paragraph3": "Atualmente estou me formando em Ciência de Dados e Inteligência Artificial, enquanto participo de projetos reais e continuo crescendo como profissional de TI."
+      "paragraph1": "Sou Martín Lucero, um educador digital, Desenvolvedor Web e Mobile, apaixonado por análise de dados, inteligência artificial e suporte de TI. De General Rodríguez, Buenos Aires, transformo ideias em soluções tecnológicas que ensinam, auxiliam e geram impacto positivo nas pessoas. Encontro inspiração na natureza, que me lembra que o crescimento — como nas árvores — leva tempo, raízes firmes e galhos que se abrem para a mudança.",
+      "paragraph2": "Com sólidos conhecimentos em Python, HTML, CSS, JavaScript, SQL e React, desenvolvo aplicações web responsivas, APIs, scripts de automação e visualizações de dados com foco prático. Também tenho experiência em suporte técnico e helpdesk: resolução de problemas, assistência remota, configuração de ambientes, instalação de software e comunicação clara com usuários. Complemento meu perfil com design de interfaces, marketing digital e otimização de SEO.",
+      "paragraph3": "Atualmente estou me formando como professor na Universidad Pedagógica Nacional, também estou concluindo uma Licenciatura em Sistemas de Informação na Universidad Nacional de Luján e participando de uma diplomatura em Inteligência Artificial junto ao Google e na Universidad Nacional del Delta. Paralelamente, colaboro em projetos reais de desenvolvimento e formação, oferecendo aulas personalizadas, criando ferramentas educacionais e acompanhando outros em sua jornada digital. Meu objetivo é claro: que a tecnologia seja cada vez mais acessível, útil e humana, em sintonia com o aprendizado, a colaboração e o respeito pelo nosso ambiente natural."
     },
     "specialties": {
       "title": "Especialidades",
       "items": {
         "frontend": {
-          "title": "Desenvolvimento Frontend",
-          "description": "HTML, CSS, JavaScript, Design Web Responsivo"
+          "title": "Especialista em Programação Web",
+          "description": "Design e desenvolvimento de interfaces responsivas com HTML, CSS, JavaScript e React. Abordagem acessível, moderna e centrada no usuário."
         },
         "dataAnalysis": {
-          "title": "Análise de Dados",
-          "description": "Python, SQL, visualização de dados"
+          "title": "Inteligência Artificial & Ciência de Dados",
+          "description": "Modelagem, visualização e análise de dados com Python e SQL. IA generativa, GCP, BigQuery ML e automação com ferramentas inteligentes."
         },
         "seoMarketing": {
-          "title": "SEO & Marketing Digital",
-          "description": "Otimização para motores de busca e marketing com IA"
+          "title": "Suporte de TI & Educação Tecnológica",
+          "description": "Resolução de problemas técnicos, assistência remota e formação personalizada. Uso de tecnologias como Git, VS Code, plataformas em nuvem e design de experiências de aprendizagem digital."
         }
       }
     },
@@ -64,7 +64,7 @@
         },
         "aiDiploma": {
           "title": "Diploma em Inteligência Artificial Generativa",
-          "institution": "Google & Universidad Nacional del Salvador",
+          "institution": "Google & Universidad Nacional del Delta",
           "period": "2024",
           "description": "Formação prática em IA generativa, GCP, BigQuery e Gemini."
         }
@@ -76,7 +76,30 @@
     "description": "Sou um desenvolvedor full-stack dedicado e estudante de engenharia de sistemas com paixão por criar soluções tecnológicas significativas. Minha jornada combina educação formal com experiência prática em desenvolvimento web, inteligência artificial e tecnologia educacional.",
     "experience": "Minha experiência abrange desde a construção de aplicações web responsivas até o desenvolvimento de chatbots com IA para instituições acadêmicas. Acredito no poder da tecnologia para transformar a educação e estou comprometido em conectar conceitos técnicos complexos com aplicações práticas.",
     "teaching": "Como educador de TI, tive o privilégio de ensinar fundamentos de programação e desenvolvimento web para desenvolvedores aspirantes. Esta experiência não apenas melhorou minhas habilidades de comunicação, mas também aprofundou minha compreensão da tecnologia de múltiplas perspectivas.",
-    "philosophy": "Abordo cada projeto com curiosidade, atenção aos detalhes e compromisso com a qualidade. Seja desenvolvendo uma aplicação full-stack ou orientando estudantes, me esforço para criar soluções que sejam tecnicamente sólidas e fáceis de usar."
+    "philosophy": "Abordo cada projeto com curiosidade, atenção aos detalhes e compromisso com a qualidade. Seja desenvolvendo uma aplicação full-stack ou orientando estudantes, me esforço para criar soluções que sejam tecnicamente sólidas e fáceis de usar.",
+    "photoData": [
+      {
+        "url": "src/horizon.png",
+        "location": "Buenos Aires, Argentina",
+        "date": "2025",
+        "description": "Olhando para o horizonte, simbolizando visão e futuro"
+      },
+      {
+        "url": "src/abrazo.jpg",
+        "location": "Buenos Aires, Argentina",
+        "date": "2024",
+        "description": "Abraçando uma árvore, simbolizando conexão com a natureza e crescimento"
+      },
+      {
+        "url": "src/martin_lechuzas.jpg",
+        "location": "Buenos Aires, Argentina",
+        "date": "2025",
+        "description": "Conhecendo as corujas, simbolizando sabedoria e conexão com a fauna local"
+      }
+    ],
+    "photoPanelLabels": ["Foto", "de", "Descrição:"],
+    "photoPanelIcons": ["📍", "📅"],
+    "photoPanelHints": ["Clique no botão de seta para percorrer as fotos"]
   },
   "experience": {
     "title": "Experiência Profissional",
@@ -178,7 +201,9 @@
       "countdown": {
         "title": "Página de Fãs do Hozier",
         "description": "Site interativo para fãs com contadores regressivos, discografia, atualizações de notícias e recursos da comunidade.",
-        "tech": ["React", "TypeScript", "Tailwind", "Firebase"]
+        "tech": ["React", "TypeScript", "Tailwind", "Firebase"],
+        "externalUrl": "https://hoziercountdown.netlify.app/",
+        "githubUrl": "https://github.com/tinchopps/hosierCountdown"
       },
       "portfolio": {
         "title": "Portfólio Pessoal",
@@ -195,6 +220,257 @@
       "database": "Bancos de Dados",
       "ai": "IA e Dados",
       "tools": "Ferramentas e Outros"
+    },
+    "summary": [
+      "25+ Certificações",
+      "500+ Horas de Estudo",
+      "10+ Projetos Aplicados"
+    ],
+    "data": {
+      "frontend": [
+        {
+          "title": "Especialização em Programação Web",
+          "institution": "CFP 401",
+          "date": "2024",
+          "duration": "9 meses",
+          "skills": ["HTML5", "CSS3", "JavaScript ES6+", "Design Responsivo", "React", "PHP", "MySQL"],
+          "type": "specialization"
+        },
+        {
+          "title": "Programação Frontend",
+          "institution": "Digital House, Potrero Digital",
+          "date": "2023",
+          "duration": "4 meses",
+          "skills": ["React", "Redux", "Webpack", "SASS", "TypeScript", "Bootstrap"],
+          "type": "certification"
+        },
+        {
+          "title": "Responsive Web Design",
+          "institution": "FreeCodeCamp",
+          "date": "2022",
+          "duration": "300 horas",
+          "skills": ["CSS Grid", "Flexbox", "Media Queries", "Acessibilidade"],
+          "type": "certification"
+        },
+        {
+          "title": "Bootstrap Framework",
+          "institution": "FreeCodeCamp",
+          "date": "2022",
+          "duration": "50 horas",
+          "skills": ["Bootstrap 5", "Sistema de Componentes", "Sistema de Grades"],
+          "type": "certification"
+        },
+        {
+          "title": "Algoritmos em JavaScript",
+          "institution": "SoloLearn",
+          "date": "2022",
+          "duration": "40 horas",
+          "skills": ["ES6+", "Manipulação DOM", "Async/Await"],
+          "type": "certification"
+        },
+        {
+          "title": "Desenvolvimento Web",
+          "institution": "SoloLearn",
+          "date": "2022",
+          "duration": "40 horas",
+          "skills": ["ES6+", "Manipulação DOM", "Async/Await"],
+          "type": "certification"
+        }
+      ],
+      "backend": [
+        {
+          "title": "Desenvolvimento Node.js",
+          "institution": "Digital House",
+          "date": "2023",
+          "duration": "3 meses",
+          "skills": ["Express.js", "APIs REST", "Middleware", "Autenticação"],
+          "type": "course"
+        },
+        {
+          "title": "Desenvolvimento Backend",
+          "institution": "Potrero Digital",
+          "date": "2025",
+          "duration": "4 meses",
+          "skills": ["PHP", "Laravel", "MySQL", "APIs"],
+          "type": "certification"
+        },
+        {
+          "title": "Programação Python",
+          "institution": "SoloLearn",
+          "date": "2023",
+          "duration": "90 horas",
+          "skills": ["Python 3", "POO", "Bibliotecas", "Estruturas de Dados"],
+          "type": "certification"
+        },
+        {
+          "title": "Bibliotecas Backend",
+          "institution": "FreeCodeCamp",
+          "date": "2023",
+          "duration": "300 horas",
+          "skills": ["Node.js", "Express.js", "MongoDB", "APIs"],
+          "type": "certification"
+        },
+        {
+          "title": "Framework FastAPI",
+          "institution": "Autodidata",
+          "date": "2024",
+          "duration": "Projeto pessoal",
+          "skills": ["FastAPI", "Pydantic", "Programação Assíncrona"],
+          "type": "project"
+        }
+      ],
+      "database": [
+        {
+          "title": "Administração PostgreSQL",
+          "institution": "Digital House",
+          "date": "2023",
+          "duration": "2 meses",
+          "skills": ["Consultas SQL", "Design de Banco de Dados", "Otimização de Performance"],
+          "type": "course"
+        },
+        {
+          "title": "Fundamentos de MongoDB",
+          "institution": "SoloLearn",
+          "date": "2023",
+          "duration": "40 horas",
+          "skills": ["NoSQL", "Agregação", "Indexação"],
+          "type": "certification"
+        },
+        {
+          "title": "Design de Banco de Dados SQL",
+          "institution": "FreeCodeCamp",
+          "date": "2022",
+          "duration": "100 horas",
+          "skills": ["Design Relacional", "Normalização", "Consultas Complexas"],
+          "type": "certification"
+        },
+        {
+          "title": "Integração Firebase",
+          "institution": "Projeto Chatbot UNLu",
+          "date": "2024",
+          "duration": "Implementação prática",
+          "skills": ["Firestore", "Banco de Dados em Tempo Real", "Autenticação"],
+          "type": "project"
+        }
+      ],
+      "ai": [
+        {
+          "title": "Diploma em IA Generativa",
+          "institution": "Google & Universidade Nacional do Delta",
+          "date": "2024",
+          "duration": "6 meses",
+          "skills": ["Gemini AI", "BigQuery", "GCP", "Engenharia de Prompts"],
+          "type": "diploma"
+        },
+        {
+          "title": "Engenharia de Prompts",
+          "institution": "SoloLearn",
+          "date": "2024",
+          "duration": "9 horas",
+          "skills": ["Design de Prompts", "Modelos de IA", "Casos de Uso"],
+          "type": "certification"
+        },
+        {
+          "title": "Testes A/B e Experimentação",
+          "institution": "SoloLearn",
+          "date": "2025",
+          "duration": "20 horas",
+          "skills": ["Design de Experimentos", "Análise Estatística", "Decisões Baseadas em Dados"],
+          "type": "certification"
+        },
+        {
+          "title": "Integração API OpenAI",
+          "institution": "Projeto Chatbot Acadêmico",
+          "date": "2024",
+          "duration": "Implementação prática",
+          "skills": ["GPT-4", "Embeddings", "Fine-tuning", "RAG"],
+          "type": "project"
+        },
+        {
+          "title": "Processamento de Linguagem Natural",
+          "institution": "Autodidata",
+          "date": "2024",
+          "duration": "Estudo contínuo",
+          "skills": ["NLTK", "spaCy", "Análise de Texto", "Análise de Sentimento"],
+          "type": "self-study"
+        }
+      ],
+      "devops": [
+        {
+          "title": "Containerização Docker",
+          "institution": "Digital House",
+          "date": "2023",
+          "duration": "1 mês",
+          "skills": ["Docker", "Docker Compose", "Orquestração de Containers"],
+          "type": "course"
+        },
+        {
+          "title": "Fundamentos AWS Cloud",
+          "institution": "AWS Training",
+          "date": "2023",
+          "duration": "30 horas",
+          "skills": ["EC2", "S3", "Lambda", "CloudFormation"],
+          "type": "certification"
+        },
+        {
+          "title": "Controle de Versão Git",
+          "institution": "FreeCodeCamp",
+          "date": "2022",
+          "duration": "20 horas",
+          "skills": ["Git", "GitHub", "Branching", "Colaboração"],
+          "type": "certification"
+        },
+        {
+          "title": "Pipelines CI/CD",
+          "institution": "Projeto Pessoal",
+          "date": "2024",
+          "duration": "Implementação prática",
+          "skills": ["GitHub Actions", "Testes Automatizados", "Deploy"],
+          "type": "project"
+        }
+      ],
+      "tools": [
+        {
+          "title": "Suporte de TI",
+          "institution": "Potrero Digital & Cisco",
+          "date": "2023",
+          "duration": "4 meses",
+          "skills": ["Hardware", "Redes", "Troubleshooting", "Help Desk"],
+          "type": "course"
+        },
+        {
+          "title": "Argentina Programa",
+          "institution": "Governo Nacional",
+          "date": "2022",
+          "duration": "6 meses",
+          "skills": ["Fundamentos IT", "Lógica de Programação", "Metodologias"],
+          "type": "program"
+        },
+        {
+          "title": "Visual Studio Code",
+          "institution": "Uso profissional",
+          "date": "Contínuo",
+          "duration": "Ferramenta principal",
+          "skills": ["Extensões", "Depuração", "Integração Git"],
+          "type": "tool"
+        },
+        {
+          "title": "Testes de API com Postman",
+          "institution": "Uso profissional",
+          "date": "Contínuo",
+          "duration": "Testando APIs",
+          "skills": ["Testes de API", "Coleções", "Automação"],
+          "type": "tool"
+        },
+        {
+          "title": "Design com Figma",
+          "institution": "Autodidata",
+          "date": "2023",
+          "duration": "Design UI/UX",
+          "skills": ["Prototipagem", "Design de Componentes", "Colaboração"],
+          "type": "tool"
+        }
+      ]
     }
   },
   "blog": {
@@ -258,12 +534,12 @@
       "title": "O que dizem sobre meu trabalho",
       "testimonial1": {
         "text": "Martín demonstrou grande capacidade técnica e criatividade no desenvolvimento do nosso projeto. Seu foco na experiência do usuário é excepcional.",
-        "name": "Juan Pérez",
+        "name": "Mauro Galiano",
         "role": "Product Manager"
       },
       "testimonial2": {
         "text": "Sua paixão pelo ensino e tecnologia se reflete em cada projeto. Sempre disposto a compartilhar conhecimento e ajudar a equipe.",
-        "name": "Ana Martínez",
+        "name": "Elizabeth Martínez",
         "role": "Tech Lead"
       }
     },

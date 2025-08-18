@@ -15,7 +15,11 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-blue-900/20"></div>
+<div className="
+  absolute inset-0 
+  bg-gradient-to-br from-gray-900 via-purple-900/20 to-blue-900/20
+  bg-hero-gradient
+"></div>
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -23,7 +27,7 @@ const Hero: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 py-12 sm:py-20 relative">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-6 animate-fade-in">
@@ -38,7 +42,7 @@ const Hero: React.FC = () => {
               </p>
             </div>
 
-            <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
+            <p className="text-gray-300 text-lg leading-relaxed w-full sm:max-w-lg md:max-w-xl">
               {t('hero.description')}
             </p>
 
@@ -87,11 +91,11 @@ const Hero: React.FC = () => {
 
           {/* Profile Image */}
           <div className="relative">
-            <div className="relative w-80 h-80 mx-auto">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse opacity-20"></div>
               <div className="relative w-full h-full bg-gradient-to-r from-gray-800 to-gray-700 rounded-full border-4 border-gray-600 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  src="/perfil.jpg" // Cambiado de 'src/perfil.jpg'
                   alt="Martín Lucero"
                   className="w-full h-full object-cover"
                 />

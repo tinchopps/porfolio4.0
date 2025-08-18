@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-20 bg-gray-900/50">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -46,12 +46,11 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
                 <h3 className="text-2xl font-bold text-white mb-6">{t('contact.getInTouch')}</h3>
                 
                 <div className="space-y-6">
@@ -77,20 +76,19 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center">
-                      <Clock className="text-green-400" size={24} />
-                    </div>
-                    <div>
-                      <p className="text-gray-400 text-sm">Status</p>
-                      <p className="text-white">{t('contact.info.availability')}</p>
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center">
+                        <Clock className="text-green-400" size={24} />
+                      </div>
+                      <div>
+                        <p className="text-gray-400 text-sm">Status</p>
+                        <p className="text-white">{t('contact.info.availability')}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
                 {/* Social Links */}
                 <div className="mt-8 pt-6 border-t border-gray-700">
-                  <h4 className="text-white font-semibold mb-4">Connect with me</h4>
                   <h4 className="text-white font-semibold mb-4">{t('contact.connectWithMe')}</h4>
                   <div className="flex space-x-4">
                     <a
@@ -116,7 +114,6 @@ const Contact: React.FC = () => {
 
             {/* Contact Form */}
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
               <h3 className="text-2xl font-bold text-white mb-6">{t('contact.sendMessage')}</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">

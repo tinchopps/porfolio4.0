@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Code, Database, Search, GraduationCap, Calendar, ExternalLink, Monitor, BarChart3, TrendingUp, ChevronLeft, ChevronRight, Info, X } from 'lucide-react';
 
+// 1. Importa tus imágenes locales aquí:
+import photo1 from '/horizon.png'; // Asegúrate de que la ruta sea correcta
+import photo2 from '/abrazo.jpg';
+import photo3 from '/martin_lechuzas.jpg';
+// Agrega más si tienes más fotos
+
 const About: React.FC = () => {
   const { t } = useTranslation();
   
@@ -9,31 +15,39 @@ const About: React.FC = () => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [showInfoPanel, setShowInfoPanel] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  
-  // Test photo data
+
+  // 2. Usa las imágenes importadas en el array photoData:
   const photoData = [
     {
-      url: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400",
-      location: "Buenos Aires, Argentina",
-      date: "2024",
-      description: "Professional headshot showcasing technical expertise and approachable personality",
-      pointsOfInterest: "Clean background, professional lighting, confident expression"
+      url: photo1,
+      location: t('about.photoData.0.location'),
+      date: t('about.photoData.0.date'),
+      description: t('about.photoData.0.description'),
+      pointofinterest: t('about.photoData.0.pointofinterest') // Agrega este campo si es necesario
+
     },
     {
-      url: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400",
-      location: "Development Environment",
-      date: "2024",
-      description: "Coding session demonstrating hands-on technical skills and problem-solving approach",
-      pointsOfInterest: "Modern workspace, multiple monitors, focused concentration"
+      url: photo2,
+      location: t('about.photoData.1.location'),
+      date: t('about.photoData.1.date'),
+      description: t('about.photoData.1.description'),
+      pointofinterest: t('about.photoData.1.pointofinterest') // Agrega este campo si es necesario
+
     },
     {
-      url: "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=400",
-      location: "Educational Setting",
-      date: "2024",
-      description: "Teaching moment highlighting passion for education and knowledge sharing",
-      pointsOfInterest: "Interactive learning environment, collaborative atmosphere"
-    }
+      url: photo3,
+      location: t('about.photoData.2.location'),
+      date: t('about.photoData.2.date'),
+      description: t('about.photoData.2.description'),
+      pointofinterest: t('about.photoData.2.pointofinterest') // Agrega este campo si es necesario
+    },
+    // Agrega más objetos si tienes más fotos
   ];
+
+  // Use i18n photo panel texts
+  const photoPanelHints = t('about.photoPanelHints', { returnObjects: true }) as string[];
+  const photoPanelLabels = t('about.photoPanelLabels', { returnObjects: true }) as string[];
+  const photoPanelIcons = t('about.photoPanelIcons', { returnObjects: true }) as string[];
   
   // Photo cycling functionality
   const handlePhotoChange = () => {
@@ -100,28 +114,28 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-900/50 relative overflow-hidden">
+    <section id="about" className="py-12 sm:py-20 bg-gray-900/50 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 right-0 w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-0 w-24 h-24 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 relative">
+        <div className="w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               {t('about.title')}
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
+            <div className="w-12 h-1 sm:w-20 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-3 gap-12 items-start mb-20">
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-12 items-start mb-10 sm:mb-20">
             {/* Who Am I Section */}
             <div className="lg:col-span-2 space-y-8">
-              <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
+              <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 sm:p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   <span className="w-2 h-8 bg-gradient-to-b from-purple-500 to-blue-500 rounded-full mr-4"></span>
                   {t('about.whoAmI.title')}
@@ -143,13 +157,13 @@ const About: React.FC = () => {
             {/* Profile Image/Avatar */}
             <div className="lg:col-span-1 flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 relative">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square relative">
                   {/* Animated background rings */}
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full animate-pulse"></div>
                   <div className="absolute inset-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full animate-pulse delay-1000"></div>
                   
                   {/* Main image container */}
-                  <div className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 rounded-full border-4 border-gray-600/50 overflow-hidden backdrop-blur-sm group">
+                  <div className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 rounded-full border-2 sm:border-4 border-gray-600/50 overflow-hidden backdrop-blur-sm group">
                     <img
                       src={currentPhoto.url}
                       alt="Martín Lucero"
@@ -161,7 +175,7 @@ const About: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
                     
                     {/* Photo counter indicator */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                       {photoData.map((_, index) => (
                         <div
                           key={index}
@@ -179,7 +193,7 @@ const About: React.FC = () => {
                   <button
                     onClick={handlePhotoChange}
                     aria-label="Change profile photo"
-                    className="absolute -top-4 -right-4 w-14 h-14 bg-gradient-to-br from-blue-500/25 to-cyan-500/25 dark:from-blue-500/25 dark:to-cyan-500/25 light:from-blue-500/35 light:to-cyan-500/35 backdrop-blur-md border-2 border-blue-400/40 dark:border-blue-400/40 light:border-blue-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 hover:bg-gradient-to-br hover:from-blue-500/35 hover:to-cyan-500/35 hover:border-blue-400/60 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-3 focus:ring-blue-500/50 group animate-bounce-subtle"
+                    className="absolute -top-2 -right-2 w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500/25 to-cyan-500/25 dark:from-blue-500/25 dark:to-cyan-500/25 light:from-blue-500/35 light:to-cyan-500/35 backdrop-blur-md border-2 border-blue-400/40 dark:border-blue-400/40 light:border-blue-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 hover:bg-gradient-to-br hover:from-blue-500/35 hover:to-cyan-500/35 hover:border-blue-400/60 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-3 focus:ring-blue-500/50 group animate-bounce-subtle"
                   >
                     <ChevronRight className="text-blue-300 dark:text-blue-300 light:text-blue-600 group-hover:text-blue-200 group-hover:translate-x-1 group-active:scale-90 transition-all duration-200 drop-shadow-sm" size={22} />
                   </button>
@@ -188,14 +202,14 @@ const About: React.FC = () => {
                   <button
                     onClick={toggleInfoPanel}
                     aria-label="Show photo details"
-                    className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-br from-purple-500/25 to-pink-500/25 dark:from-purple-500/25 dark:to-pink-500/25 light:from-purple-500/35 light:to-pink-500/35 backdrop-blur-md border-2 border-purple-400/40 dark:border-purple-400/40 light:border-purple-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 hover:bg-gradient-to-br hover:from-purple-500/35 hover:to-pink-500/35 hover:border-purple-400/60 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-3 focus:ring-purple-500/50 group animate-bounce-subtle"
+                    className="absolute -bottom-2 -left-2 w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500/25 to-pink-500/25 dark:from-purple-500/25 dark:to-pink-500/25 light:from-purple-500/35 light:to-pink-500/35 backdrop-blur-md border-2 border-purple-400/40 dark:border-purple-400/40 light:border-purple-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 hover:bg-gradient-to-br hover:from-purple-500/35 hover:to-pink-500/35 hover:border-purple-400/60 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-3 focus:ring-purple-500/50 group animate-bounce-subtle"
                   >
                     <Info className="text-purple-300 dark:text-purple-300 light:text-purple-600 group-hover:text-purple-200 group-hover:scale-110 group-active:scale-90 transition-all duration-200 drop-shadow-sm" size={22} />
                   </button>
                   
                   {/* Information Panel */}
                   {showInfoPanel && (
-                    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 translate-y-full w-80 z-50">
+                    <div className="absolute -bottom-4 sm:-bottom-6 left-1/2 transform -translate-x-1/2 translate-y-full w-full max-w-xs sm:max-w-sm md:max-w-md z-50">
                       <div className="bg-white/90 dark:bg-gray-800/90 light:bg-white/95 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 light:border-gray-300/50 rounded-xl p-6 shadow-2xl animate-fade-in">
                         {/* Close button */}
                         <button
@@ -210,15 +224,15 @@ const About: React.FC = () => {
                         <div className="space-y-4">
                           <div className="border-b border-gray-200/50 dark:border-gray-700/50 light:border-gray-300/50 pb-3">
                             <h4 className="text-lg font-bold text-gray-900 dark:text-white light:text-gray-900 mb-1">
-                              Photo {currentPhotoIndex + 1} of {photoData.length}
+                              {photoPanelLabels[0]} {currentPhotoIndex + 1} {photoPanelLabels[1]} {photoData.length}
                             </h4>
                             <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400 light:text-gray-600">
                               <span className="flex items-center space-x-1">
-                                <span>📍</span>
+                                <span>{photoPanelIcons[0]}</span>
                                 <span>{currentPhoto.location}</span>
                               </span>
                               <span className="flex items-center space-x-1">
-                                <span>📅</span>
+                                <span>{photoPanelIcons[1]}</span>
                                 <span>{currentPhoto.date}</span>
                               </span>
                             </div>
@@ -226,32 +240,28 @@ const About: React.FC = () => {
                           
                           <div className="space-y-3">
                             <div>
-                              <h5 className="font-semibold text-gray-800 dark:text-gray-200 light:text-gray-800 mb-1">Description:</h5>
+                              <h5 className="font-semibold text-gray-800 dark:text-gray-200 light:text-gray-800 mb-1">{photoPanelLabels[2]}</h5>
                               <p className="text-sm text-gray-600 dark:text-gray-400 light:text-gray-600 leading-relaxed">
                                 {currentPhoto.description}
                               </p>
-                            </div>
-                            
-                            <div>
-                              <h5 className="font-semibold text-gray-800 dark:text-gray-200 light:text-gray-800 mb-1">Points of Interest:</h5>
-                              <p className="text-sm text-gray-600 dark:text-gray-400 light:text-gray-600 leading-relaxed">
-                                {currentPhoto.pointsOfInterest}
-                              </p>
+                              {currentPhoto.pointofinterest && (
+                                <p className="text-xs text-purple-400 mt-2">
+                                  {currentPhoto.pointofinterest}
+                                </p>
+                              )}
                             </div>
                           </div>
                           
                           {/* Navigation hint */}
                           <div className="pt-3 border-t border-gray-200/50 dark:border-gray-700/50 light:border-gray-300/50">
                             <p className="text-xs text-gray-500 dark:text-gray-500 light:text-gray-500 text-center">
-                              Click the arrow button to cycle through photos
+                              {photoPanelHints[0]}
                             </p>
                           </div>
                         </div>
                       </div>
                     </div>
                   )}
-                </div>
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full flex items-center justify-center animate-bounce delay-500">
                 </div>
               </div>
             </div>
@@ -264,7 +274,7 @@ const About: React.FC = () => {
               {specialties.map((specialty, index) => (
                 <div
                   key={index}
-                  className={`group ${specialty.bgColor} backdrop-blur-sm border ${specialty.borderColor} ${specialty.hoverBorder} rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 cursor-pointer`}
+                  className={`group ${specialty.bgColor} backdrop-blur-sm border ${specialty.borderColor} ${specialty.hoverBorder} rounded-xl p-4 sm:p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 cursor-pointer`}
                 >
                   <div className="mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${specialty.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -329,7 +339,7 @@ const About: React.FC = () => {
           {/* CTA Button */}
           <div className="text-center">
             <a
-              href="https://www.tinchopps.com.ar/CV.pdf"
+              href="https://www.canva.com/design/DAGaIcXyFOk/EEEP-P69hocoVdRLNqCgWA/view"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 group"

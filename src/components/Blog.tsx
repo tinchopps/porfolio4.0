@@ -11,17 +11,7 @@ const Blog: React.FC = () => {
   const [modalMessage, setModalMessage] = useState('');
 
   const blogPosts = [
-    {
-      id: 1,
-      title: 'Building Modern Web Applications with React and TypeScript',
-      excerpt: 'A comprehensive guide to creating scalable and maintainable web applications using React and TypeScript.',
-      category: 'technical',
-      readTime: 8,
-      date: '2024-01-15',
-      status: 'draft',
-      available: false,
-      image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
+
     {
       id: 2,
       title: 'My Journey from Student to Full Stack Developer',
@@ -31,7 +21,7 @@ const Blog: React.FC = () => {
       date: '2024-01-10',
       status: 'draft',
       available: false,
-      image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/3184299/pexels-photo-3184299.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       id: 3,
@@ -41,7 +31,7 @@ const Blog: React.FC = () => {
       readTime: 10,
       date: '2024-01-05',
       status: 'published',
-      available: true,
+      available: false,
       image: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
@@ -63,8 +53,8 @@ const Blog: React.FC = () => {
       readTime: 7,
       date: '2023-12-20',
       status: 'published',
-      available: true,
-      image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600',
+      available: false,
+      image: 'https://images.pexels.com/photos/5240543/pexels-photo-5240543.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       id: 6,
@@ -74,7 +64,7 @@ const Blog: React.FC = () => {
       readTime: 15,
       date: '2023-12-15',
       status: 'published',
-      available: true,
+      available: false,
       image: 'https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
   ];
