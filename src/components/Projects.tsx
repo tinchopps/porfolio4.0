@@ -10,26 +10,13 @@ const Projects: React.FC = () => {
 
   const projects = [
 
-        {
-      id: 'trivia',
+    {
+      id: 'one_piece_quiz',
       image: '/op.png',
-      status: 'in-progress',
+      status: 'completed',
       available: true,
-      externalUrl: 'https://github.com/tinchopps/Trivia_One_Piece_api/blob/main/questions.json',
-      githubUrl: 'https://github.com/tinchopps/Trivia_One_Piece_api'
-    },
-    {
-      id: 'chatbot',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
-      status: 'in-progress',
-      available: false
-    },
-
-    {
-      id: 'ecommerce',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      status: 'in-progress',
-      available: false
+      externalUrl: 'https://trivia-nakama.netlify.app/',
+      githubUrl: 'https://github.com/tinchopps/one_piece_quiz_4.0'
     },
     {
       id: 'countdown',
@@ -38,6 +25,30 @@ const Projects: React.FC = () => {
       available: true,
       externalUrl: 'https://hoziercountdown.netlify.app/',
       githubUrl: 'https://github.com/tinchopps/hosierCountdown'
+    },
+    {
+      id: 'asistente_restaurante',
+  image: '/bot_restaruante1.png',
+      status: 'in-progress',
+      available: true,
+  externalUrl: 'https://github.com/tinchopps/asistente-restaurante/blob/main/README.md',
+      githubUrl: 'https://github.com/tinchopps/asistente-restaurante'
+    },
+    {
+      id: 'ticket_support',
+  image: '/ticket_support1.png',
+      status: 'in-progress',
+      available: true,
+  externalUrl: 'https://github.com/tinchopps/ticket_support/blob/main/README.md',
+      githubUrl: 'https://github.com/tinchopps/ticket_support'
+    },
+    {
+      id: 'bot_pedidos_whatsapp',
+  image: '/order_bot.png',
+      status: 'in-progress',
+      available: true,
+  externalUrl: 'https://github.com/tinchopps/bot_pedidos_whatsapp/blob/main/README.md',
+      githubUrl: 'https://github.com/tinchopps/bot_pedidos_whatsapp'
     }
   ];
 
@@ -58,10 +69,8 @@ const Projects: React.FC = () => {
   const handleViewCode = (project: typeof projects[0]) => {
     if (project.available) {
       // Si es el proyecto de Hozier, abrir el link de GitHub
-      if (project.id === 'countdown' && project.githubUrl) {
         window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
         return;
-      }
       // Handle GitHub navigation for other available projects
       console.log('Navigate to GitHub:', project.id);
     } else {
@@ -93,7 +102,7 @@ const Projects: React.FC = () => {
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <div
                 key={project.id}
                 className="group bg-gray-800/50 dark:bg-gray-800/50 light:bg-white backdrop-blur-sm border border-gray-700/50 dark:border-gray-700/50 light:border-gray-200 rounded-xl overflow-hidden hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 transform hover:scale-[1.02] cursor-pointer"
@@ -121,14 +130,18 @@ const Projects: React.FC = () => {
                   {/* Tech Stack */}
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-2">
-                      {t(`projects.items.${project.id}.tech`, { returnObjects: true }).map((tech: string, techIndex: number) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1 bg-gray-700/50 dark:bg-gray-700/50 light:bg-gray-100 text-gray-300 dark:text-gray-300 light:text-gray-700 text-xs rounded-full border border-gray-600/50 dark:border-gray-600/50 light:border-gray-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      {(() => {
+                        const techs = t(`projects.items.${project.id}.tech`, { returnObjects: true });
+                        if (!Array.isArray(techs)) return null;
+                        return techs.map((tech: any, techIndex: number) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1 bg-gray-700/50 dark:bg-gray-700/50 light:bg-gray-100 text-gray-300 dark:text-gray-300 light:text-gray-700 text-xs rounded-full border border-gray-600/50 dark:border-gray-600/50 light:border-gray-300"
+                          >
+                            {tech}
+                          </span>
+                        ));
+                      })()}
                     </div>
                   </div>
 

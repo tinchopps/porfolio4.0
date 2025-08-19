@@ -210,6 +210,27 @@
         "description": "Este site portfólio mostrando meu trabalho, habilidades e jornada como desenvolvedor com suporte multi-idioma e design moderno.",
         "tech": ["React", "TypeScript", "Tailwind", "i18next", "Vite"]
       }
+      ,
+      "one_piece_quiz": {
+        "title": "Trivia One Piece (Web Quiz)",
+        "description": "Um quiz baseado no navegador sobre One Piece com backend API REST e frontend responsivo para fãs testarem seus conhecimentos.",
+        "tech": ["React", "Node.js", "Express", "MongoDB"]
+      },
+      "asistente_restaurante": {
+        "title": "Assistente de Restaurante",
+        "description": "Assistente para gerenciamento de pedidos e cardápios com UI simples e automações de backend para ajudar pequenos negócios.",
+        "tech": ["Python", "Flask", "SQLite"]
+      },
+      "ticket_support": {
+        "title": "Sistema de Suporte por Tickets",
+        "description": "Um sistema leve de tickets/support para rastrear problemas de usuários, atribuir agentes e gerenciar o ciclo de vida das solicitações.",
+        "tech": ["Node.js", "Express", "PostgreSQL"]
+      },
+      "bot_pedidos_whatsapp": {
+        "title": "Bot de Pedidos via WhatsApp",
+        "description": "Um bot do WhatsApp para receber pedidos e interagir com clientes via mensagens, útil para pequenos restaurantes e lojas.",
+        "tech": ["Python", "Twilio", "Flask"]
+      }
     }
   },
   "skills": {
