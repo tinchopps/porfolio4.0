@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             <div className="space-y-2">
               <p className="text-purple-400 font-medium text-lg">{t('hero.greeting')}</p>
               <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
-                Martín <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Lucero</span>
+                Martín Omar<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Lucero</span>
               </h1>
               <p className="text-xl text-gray-300 font-medium">{t('hero.role')}</p>
               <p className="text-gray-400 flex items-center">
