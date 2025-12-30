@@ -1,356 +1,267 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Code, Database, Search, GraduationCap, Calendar, ExternalLink, Monitor, BarChart3, TrendingUp, ChevronLeft, ChevronRight, Info, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Monitor, TrendingUp, Calendar, ExternalLink,
+  ChevronRight, Info, X, GraduationCap, Leaf, Brain
+} from 'lucide-react';
+import { BentoCard, BentoCardHeader, BentoCardContent } from './BentoCard';
+import { BentoGrid, BentoSection } from './BentoGrid';
 
-// 1. Importa tus imágenes locales aquí:
-import photo1 from '/horizon.png'; // Asegúrate de que la ruta sea correcta
+// Import local images
+import photo1 from '/horizon.png';
 import photo2 from '/abrazo.jpg';
 import photo3 from '/martin_lechuzas.jpg';
-// Agrega más si tienes más fotos
 
 const About: React.FC = () => {
   const { t } = useTranslation();
-  
+
   // Photo cycling state
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [showInfoPanel, setShowInfoPanel] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // 2. Usa las imágenes importadas en el array photoData:
   const photoData = [
     {
       url: photo1,
       location: t('about.photoData.0.location'),
       date: t('about.photoData.0.date'),
       description: t('about.photoData.0.description'),
-      pointofinterest: t('about.photoData.0.pointofinterest') // Agrega este campo si es necesario
-
+      pointofinterest: t('about.photoData.0.pointofinterest')
     },
     {
       url: photo2,
       location: t('about.photoData.1.location'),
       date: t('about.photoData.1.date'),
       description: t('about.photoData.1.description'),
-      pointofinterest: t('about.photoData.1.pointofinterest') // Agrega este campo si es necesario
-
+      pointofinterest: t('about.photoData.1.pointofinterest')
     },
     {
       url: photo3,
       location: t('about.photoData.2.location'),
       date: t('about.photoData.2.date'),
       description: t('about.photoData.2.description'),
-      pointofinterest: t('about.photoData.2.pointofinterest') // Agrega este campo si es necesario
+      pointofinterest: t('about.photoData.2.pointofinterest')
     },
-    // Agrega más objetos si tienes más fotos
   ];
 
-  // Use i18n photo panel texts
-  const photoPanelHints = t('about.photoPanelHints', { returnObjects: true }) as string[];
   const photoPanelLabels = t('about.photoPanelLabels', { returnObjects: true }) as string[];
   const photoPanelIcons = t('about.photoPanelIcons', { returnObjects: true }) as string[];
-  
-  // Photo cycling functionality
+
   const handlePhotoChange = () => {
     setIsTransitioning(true);
-    
     setTimeout(() => {
-      setCurrentPhotoIndex((prevIndex) => 
-        prevIndex === photoData.length - 1 ? 0 : prevIndex + 1
-      );
+      setCurrentPhotoIndex((prev) => (prev + 1) % photoData.length);
       setIsTransitioning(false);
     }, 150);
   };
-  
-  // Info panel toggle
-  const toggleInfoPanel = () => {
-    setShowInfoPanel(!showInfoPanel);
-  };
-  
+
+  const toggleInfoPanel = () => setShowInfoPanel(!showInfoPanel);
   const currentPhoto = photoData[currentPhotoIndex];
 
   const specialties = [
     {
       icon: Monitor,
       key: 'frontend',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-500/10',
-      borderColor: 'border-blue-500/20',
-      hoverBorder: 'hover:border-blue-500/50'
+      gradient: 'from-blue-500 to-cyan-500',
     },
     {
-      icon: BarChart3,
+      icon: Brain,
       key: 'dataAnalysis',
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'bg-purple-500/10',
-      borderColor: 'border-purple-500/20',
-      hoverBorder: 'hover:border-purple-500/50'
+      gradient: 'from-purple-500 to-pink-500',
     },
     {
       icon: TrendingUp,
       key: 'seoMarketing',
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-500/10',
-      borderColor: 'border-green-500/20',
-      hoverBorder: 'hover:border-green-500/50'
+      gradient: 'from-green-500 to-emerald-500',
     },
   ];
 
   const education = [
-    {
-      icon: '🎓',
-      key: 'systemsEngineering',
-      status: 'current'
-    },
-    {
-      icon: '👨‍🏫',
-      key: 'teachingDegree',
-      status: 'current'
-    },
-    {
-      icon: '🤖',
-      key: 'aiDiploma',
-      status: 'completed'
-    },
+    { icon: '🎓', key: 'systemsEngineering', status: 'current' },
+    { icon: '👨‍🏫', key: 'teachingDegree', status: 'current' },
+    { icon: '🤖', key: 'aiDiploma', status: 'completed' },
   ];
 
   return (
-    <section id="about" className="py-12 sm:py-20 bg-gray-900/50 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-0 w-24 h-24 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
-      </div>
+    <BentoSection id="about" title={t('about.title')}>
+      <BentoGrid columns={4} className="mb-12">
+        {/* Who Am I - Main Card */}
+        <BentoCard size="wide" delay={0} className="md:row-span-2">
+          <BentoCardHeader
+            icon={<Info size={20} />}
+            title={t('about.whoAmI.title')}
+          />
+          <BentoCardContent>
+            <div className="space-y-4 text-gray-300 leading-relaxed text-sm">
+              <p>{t('about.intro.paragraph1')}</p>
+              <p className="hidden md:block">{t('about.intro.paragraph2')}</p>
+              <p className="hidden lg:block">{t('about.intro.paragraph3')}</p>
+            </div>
+          </BentoCardContent>
+        </BentoCard>
 
-      <div className="container mx-auto px-2 sm:px-4 md:px-6 relative">
-        <div className="w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              {t('about.title')}
-            </h2>
-            <div className="w-12 h-1 sm:w-20 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
-          </div>
+        {/* Nature Connection - Photo Card */}
+        <BentoCard size="tall" delay={1} hover={false} className="p-0 overflow-hidden">
+          <div className="relative w-full h-full min-h-[300px]">
+            {/* Photo */}
+            <motion.img
+              key={currentPhotoIndex}
+              src={currentPhoto.url}
+              alt="Martín in nature"
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isTransitioning ? 0 : 1 }}
+              transition={{ duration: 0.3 }}
+            />
 
-          {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-3 gap-6 sm:gap-12 items-start mb-10 sm:mb-20">
-            {/* Who Am I Section */}
-            <div className="lg:col-span-2 space-y-8">
-              <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 sm:p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <span className="w-2 h-8 bg-gradient-to-b from-purple-500 to-blue-500 rounded-full mr-4"></span>
-                  {t('about.whoAmI.title')}
-                </h3>
-                <div className="space-y-4 text-gray-300 leading-relaxed">
-                  <p>
-                    {t('about.intro.paragraph1')}
-                  </p>
-                  <p>
-                    {t('about.intro.paragraph2')}
-                  </p>
-                  <p>
-                    {t('about.intro.paragraph3')}
-                  </p>
-                </div>
-              </div>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-bento-dark via-transparent to-transparent" />
+
+            {/* Photo indicators */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              {photoData.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-all ${index === currentPhotoIndex ? 'bg-white scale-125' : 'bg-white/40'
+                    }`}
+                />
+              ))}
             </div>
 
-            {/* Profile Image/Avatar */}
-            <div className="lg:col-span-1 flex justify-center lg:justify-end">
-              <div className="relative">
-            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square relative">
-                  {/* Animated background rings */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full animate-pulse"></div>
-                  <div className="absolute inset-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full animate-pulse delay-1000"></div>
-                  
-                  {/* Main image container */}
-                  <div className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 rounded-full border-2 sm:border-4 border-gray-600/50 overflow-hidden backdrop-blur-sm group">
-                    <img
-                      src={currentPhoto.url}
-                      alt="Martín Lucero"
-                      className={`w-full h-full object-cover transition-opacity duration-300 ${
-                        isTransitioning ? 'opacity-0' : 'opacity-100'
-                      }`}
-                    />
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
-                    
-                    {/* Photo counter indicator */}
-                    <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                      {photoData.map((_, index) => (
-                        <div
-                          key={index}
-                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                            index === currentPhotoIndex 
-                              ? 'bg-white shadow-lg' 
-                              : 'bg-white/40'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Upper floating button - Photo cycling */}
-                  <button
-                    onClick={handlePhotoChange}
-                    aria-label="Change profile photo"
-                    className="absolute -top-2 -right-2 w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500/25 to-cyan-500/25 dark:from-blue-500/25 dark:to-cyan-500/25 light:from-blue-500/35 light:to-cyan-500/35 backdrop-blur-md border-2 border-blue-400/40 dark:border-blue-400/40 light:border-blue-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 hover:bg-gradient-to-br hover:from-blue-500/35 hover:to-cyan-500/35 hover:border-blue-400/60 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-3 focus:ring-blue-500/50 group animate-bounce-subtle"
-                  >
-                    <ChevronRight className="text-blue-300 dark:text-blue-300 light:text-blue-600 group-hover:text-blue-200 group-hover:translate-x-1 group-active:scale-90 transition-all duration-200 drop-shadow-sm" size={22} />
-                  </button>
-                  
-                  {/* Lower floating button - Info panel */}
+            {/* Controls */}
+            <div className="absolute top-4 right-4 flex gap-2">
+              <button
+                onClick={toggleInfoPanel}
+                className="p-2 bg-black/50 backdrop-blur-sm rounded-lg hover:bg-primary/50 transition-colors"
+                aria-label="Photo info"
+              >
+                <Info size={16} className="text-white" />
+              </button>
+              <button
+                onClick={handlePhotoChange}
+                className="p-2 bg-black/50 backdrop-blur-sm rounded-lg hover:bg-primary/50 transition-colors"
+                aria-label="Next photo"
+              >
+                <ChevronRight size={16} className="text-white" />
+              </button>
+            </div>
+
+            {/* Nature badge */}
+            <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-secondary/20 backdrop-blur-sm rounded-full border border-secondary/30">
+              <Leaf size={14} className="text-secondary" />
+              <span className="text-xs text-secondary font-medium">Nature</span>
+            </div>
+
+            {/* Info Panel */}
+            <AnimatePresence>
+              {showInfoPanel && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  className="absolute inset-x-4 bottom-12 bg-bento-card/95 backdrop-blur-md rounded-xl p-4 border border-bento-border"
+                >
                   <button
                     onClick={toggleInfoPanel}
-                    aria-label="Show photo details"
-                    className="absolute -bottom-2 -left-2 w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500/25 to-pink-500/25 dark:from-purple-500/25 dark:to-pink-500/25 light:from-purple-500/35 light:to-pink-500/35 backdrop-blur-md border-2 border-purple-400/40 dark:border-purple-400/40 light:border-purple-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 hover:bg-gradient-to-br hover:from-purple-500/35 hover:to-pink-500/35 hover:border-purple-400/60 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-3 focus:ring-purple-500/50 group animate-bounce-subtle"
+                    className="absolute top-2 right-2 p-1 hover:bg-white/10 rounded"
                   >
-                    <Info className="text-purple-300 dark:text-purple-300 light:text-purple-600 group-hover:text-purple-200 group-hover:scale-110 group-active:scale-90 transition-all duration-200 drop-shadow-sm" size={22} />
+                    <X size={14} className="text-gray-400" />
                   </button>
-                  
-                  {/* Information Panel */}
-                  {showInfoPanel && (
-                    <div className="absolute -bottom-4 sm:-bottom-6 left-1/2 transform -translate-x-1/2 translate-y-full w-full max-w-xs sm:max-w-sm md:max-w-md z-50">
-                      <div className="bg-white/90 dark:bg-gray-800/90 light:bg-white/95 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 light:border-gray-300/50 rounded-xl p-6 shadow-2xl animate-fade-in">
-                        {/* Close button */}
-                        <button
-                          onClick={toggleInfoPanel}
-                          aria-label="Close photo details"
-                          className="absolute top-3 right-3 w-6 h-6 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 light:hover:text-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded"
-                        >
-                          <X size={16} />
-                        </button>
-                        
-                        {/* Panel content */}
-                        <div className="space-y-4">
-                          <div className="border-b border-gray-200/50 dark:border-gray-700/50 light:border-gray-300/50 pb-3">
-                            <h4 className="text-lg font-bold text-gray-900 dark:text-white light:text-gray-900 mb-1">
-                              {photoPanelLabels[0]} {currentPhotoIndex + 1} {photoPanelLabels[1]} {photoData.length}
-                            </h4>
-                            <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400 light:text-gray-600">
-                              <span className="flex items-center space-x-1">
-                                <span>{photoPanelIcons[0]}</span>
-                                <span>{currentPhoto.location}</span>
-                              </span>
-                              <span className="flex items-center space-x-1">
-                                <span>{photoPanelIcons[1]}</span>
-                                <span>{currentPhoto.date}</span>
-                              </span>
-                            </div>
-                          </div>
-                          
-                          <div className="space-y-3">
-                            <div>
-                              <h5 className="font-semibold text-gray-800 dark:text-gray-200 light:text-gray-800 mb-1">{photoPanelLabels[2]}</h5>
-                              <p className="text-sm text-gray-600 dark:text-gray-400 light:text-gray-600 leading-relaxed">
-                                {currentPhoto.description}
-                              </p>
-                              {currentPhoto.pointofinterest && (
-                                <p className="text-xs text-purple-400 mt-2">
-                                  {currentPhoto.pointofinterest}
-                                </p>
-                              )}
-                            </div>
-                          </div>
-                          
-                          {/* Navigation hint */}
-                          <div className="pt-3 border-t border-gray-200/50 dark:border-gray-700/50 light:border-gray-300/50">
-                            <p className="text-xs text-gray-500 dark:text-gray-500 light:text-gray-500 text-center">
-                              {photoPanelHints[0]}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Specialties Section */}
-          <div className="mb-20">
-            <h3 className="text-3xl font-bold text-white mb-8 text-center">{t('about.specialties.title')}</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {specialties.map((specialty, index) => (
-                <div
-                  key={index}
-                  className={`group ${specialty.bgColor} backdrop-blur-sm border ${specialty.borderColor} ${specialty.hoverBorder} rounded-xl p-4 sm:p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 cursor-pointer`}
-                >
-                  <div className="mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${specialty.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <specialty.icon className="text-white" size={24} />
-                    </div>
+                  <p className="text-sm font-medium text-white mb-1">
+                    {photoPanelLabels[0]} {currentPhotoIndex + 1} {photoPanelLabels[1]} {photoData.length}
+                  </p>
+                  <div className="flex items-center gap-3 text-xs text-gray-400 mb-2">
+                    <span>{photoPanelIcons[0]} {currentPhoto.location}</span>
+                    <span>{photoPanelIcons[1]} {currentPhoto.date}</span>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                    {t(`about.specialties.items.${specialty.key}.title`)}
-                  </h4>
-                  <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
-                    {t(`about.specialties.items.${specialty.key}.description`)}
+                  <p className="text-xs text-gray-300">{currentPhoto.description}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </BentoCard>
+
+        {/* Specialties Cards */}
+        {specialties.map((specialty, index) => (
+          <BentoCard key={specialty.key} delay={index + 2}>
+            <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${specialty.gradient} flex items-center justify-center mb-4`}>
+              <specialty.icon size={20} className="text-white" />
+            </div>
+            <h4 className="font-semibold text-white mb-2 text-sm">
+              {t(`about.specialties.items.${specialty.key}.title`)}
+            </h4>
+            <p className="text-xs text-gray-400 leading-relaxed line-clamp-3">
+              {t(`about.specialties.items.${specialty.key}.description`)}
+            </p>
+          </BentoCard>
+        ))}
+      </BentoGrid>
+
+      {/* Education Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-12"
+      >
+        <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+          <GraduationCap className="text-primary" />
+          {t('about.education.title')}
+        </h3>
+
+        <BentoGrid columns={3}>
+          {education.map((edu, index) => (
+            <BentoCard key={edu.key} delay={index}>
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">{edu.icon}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1 flex-wrap">
+                    <h4 className="font-semibold text-white text-sm">
+                      {t(`about.education.items.${edu.key}.title`)}
+                    </h4>
+                    <span className={`px-2 py-0.5 text-xs rounded-full ${edu.status === 'current'
+                      ? 'bg-secondary/20 text-secondary border border-secondary/30'
+                      : 'bg-accent/20 text-accent border border-accent/30'
+                      }`}>
+                      {t(`about.education.status.${edu.status}`)}
+                    </span>
+                  </div>
+                  <p className="text-primary text-xs font-medium mb-1">
+                    {t(`about.education.items.${edu.key}.institution`)}
+                  </p>
+                  <div className="flex items-center gap-1 text-gray-400 text-xs mb-2">
+                    <Calendar size={12} />
+                    <span>{t(`about.education.items.${edu.key}.period`)}</span>
+                  </div>
+                  <p className="text-xs text-gray-400 line-clamp-2">
+                    {t(`about.education.items.${edu.key}.description`)}
                   </p>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            </BentoCard>
+          ))}
+        </BentoGrid>
+      </motion.div>
 
-          {/* Education Timeline */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-bold text-white mb-8 text-center">{t('about.education.title')}</h3>
-            <div className="space-y-6">
-              {education.map((edu, index) => (
-                <div
-                  key={index}
-                  className="group bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 hover:bg-gray-800/50 transition-all duration-300"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gray-700/50 rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                        {edu.icon}
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <h4 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
-                          {t(`about.education.items.${edu.key}.title`)}
-                        </h4>
-                        {edu.status === 'current' && (
-                          <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">
-                            {t('about.education.status.current')}
-                          </span>
-                        )}
-                        {edu.status === 'completed' && (
-                          <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">
-                            {t('about.education.status.completed')}
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-purple-400 font-medium mb-1">{t(`about.education.items.${edu.key}.institution`)}</p>
-                      <div className="flex items-center space-x-2 text-gray-400 text-sm mb-2">
-                        <Calendar size={14} />
-                        <span>{t(`about.education.items.${edu.key}.period`)}</span>
-                      </div>
-                      <p className="text-gray-300 text-sm">{t(`about.education.items.${edu.key}.description`)}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="text-center">
-            <a
-              href="https://www.canva.com/design/DAGaIcXyFOk/EEEP-P69hocoVdRLNqCgWA/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 group"
-            >
-              <span>{t('about.cta.viewCV')}</span>
-              <ExternalLink size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+      {/* CV CTA */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
+        <a
+          href="https://www.canva.com/design/DAGaIcXyFOk/EEEP-P69hocoVdRLNqCgWA/view"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary inline-flex items-center gap-2"
+        >
+          <span>{t('about.cta.viewCV')}</span>
+          <ExternalLink size={18} />
+        </a>
+      </motion.div>
+    </BentoSection>
   );
 };
 

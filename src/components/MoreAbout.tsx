@@ -1,179 +1,133 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { MessageCircle, Heart, Lightbulb, Users, GraduationCap, Rocket } from 'lucide-react';
+import { BentoCard } from './BentoCard';
+import { BentoGrid, BentoSection } from './BentoGrid';
 
 const MoreAbout: React.FC = () => {
   const { t } = useTranslation();
-  
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
   const values = [
-    {
-      icon: GraduationCap,
-      key: 'continuousLearning',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Rocket,
-      key: 'growthMindset',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Users,
-      key: 'teamwork',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Lightbulb,
-      key: 'practicalCreativity',
-      color: 'from-orange-500 to-red-500'
-    }
+    { icon: GraduationCap, key: 'continuousLearning', gradient: 'from-blue-500 to-cyan-500' },
+    { icon: Rocket, key: 'growthMindset', gradient: 'from-purple-500 to-pink-500' },
+    { icon: Users, key: 'teamwork', gradient: 'from-green-500 to-emerald-500' },
+    { icon: Lightbulb, key: 'practicalCreativity', gradient: 'from-orange-500 to-red-500' },
+  ];
+
+  const testimonials = [
+    { key: 'testimonial1', initials: 'MG', gradient: 'from-purple-500 to-blue-500' },
+    { key: 'testimonial2', initials: 'EM', gradient: 'from-green-500 to-emerald-500' },
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background with subtle pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/10 to-blue-900/10"></div>
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}></div>
-      </div>
+    <BentoSection title={`🌟 ${t('moreAbout.title')}`}>
+      <BentoGrid columns={2} className="mb-12">
+        {/* Quote Card */}
+        <BentoCard size="wide" delay={0} className="relative overflow-hidden">
+          <div className="absolute top-4 left-4 text-6xl text-primary/10 font-serif">"</div>
+          <div className="absolute bottom-4 right-4 text-6xl text-primary/10 font-serif rotate-180">"</div>
 
-      {/* Floating elements */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-purple-500/5 rounded-full blur-2xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-
-      <div className="container mx-auto px-6 relative">
-        <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              🌟 {t('moreAbout.title')}
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
+          <div className="relative z-10 text-center py-6">
+            <blockquote className="text-xl md:text-2xl font-light text-white leading-relaxed mb-4 italic">
+              {t('moreAbout.quote.text')}
+            </blockquote>
+            <footer className="text-primary font-medium">
+              {t('moreAbout.quote.author')}
+            </footer>
           </div>
+        </BentoCard>
 
-          {/* Quote Section */}
-          <div className="mb-16">
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 md:p-12 relative overflow-hidden">
-              {/* Quote decoration */}
-              <div className="absolute top-4 left-4 text-6xl text-purple-500/20 font-serif">"</div>
-              <div className="absolute bottom-4 right-4 text-6xl text-purple-500/20 font-serif rotate-180">"</div>
-              
-              <blockquote className="text-center relative z-10">
-                <p className="text-2xl md:text-3xl font-light text-white leading-relaxed mb-6 italic">
-                  {t('moreAbout.quote.text')}
+        {/* Philosophy */}
+        <BentoCard size="wide" delay={1}>
+          <p className="text-gray-300 leading-relaxed mb-6 text-center">
+            {t('moreAbout.philosophy')}
+          </p>
+
+          {/* Values Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {values.map((value, index) => (
+              <motion.div
+                key={value.key}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className={`w-10 h-10 bg-gradient-to-r ${value.gradient} rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform`}>
+                  <value.icon size={18} className="text-white" />
+                </div>
+                <p className="text-xs text-gray-400 group-hover:text-white transition-colors">
+                  {t(`moreAbout.values.${value.key}`)}
                 </p>
-                <footer className="text-purple-400 font-medium text-lg">
-                  {t('moreAbout.quote.author')}
-                </footer>
-              </blockquote>
-            </div>
+              </motion.div>
+            ))}
           </div>
+        </BentoCard>
 
-          {/* Personal Philosophy */}
-          <div className="mb-16">
-            <div className="bg-gray-800/20 backdrop-blur-sm border border-gray-700/30 rounded-xl p-8">
-              <p className="text-gray-300 text-lg leading-relaxed text-center mb-8">
-                {t('moreAbout.philosophy')}
-              </p>
-
-              {/* Values Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {values.map((value, index) => (
-                  <div
-                    key={index}
-                    className="group bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 hover:bg-gray-800/50 transition-all duration-300 hover:scale-105"
-                  >
-                    <div className="text-center">
-                      <div className={`w-12 h-12 bg-gradient-to-r ${value.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                        <value.icon className="text-white" size={24} />
-                      </div>
-                      <p className="text-white font-medium text-sm group-hover:text-purple-300 transition-colors">
-                        {t(`moreAbout.values.${value.key}`)}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+        {/* Testimonials */}
+        {testimonials.map((testimonial, index) => (
+          <BentoCard key={testimonial.key} delay={index + 2}>
+            <div className="flex items-start gap-4">
+              <div className={`w-12 h-12 bg-gradient-to-r ${testimonial.gradient} rounded-full flex items-center justify-center shrink-0`}>
+                <span className="text-white font-bold text-sm">{testimonial.initials}</span>
+              </div>
+              <div>
+                <p className="text-gray-300 text-sm italic mb-3 line-clamp-3">
+                  "{t(`moreAbout.testimonials.${testimonial.key}.text`)}"
+                </p>
+                <p className="text-white font-medium text-sm">
+                  {t(`moreAbout.testimonials.${testimonial.key}.name`)}
+                </p>
+                <p className="text-primary text-xs">
+                  {t(`moreAbout.testimonials.${testimonial.key}.role`)}
+                </p>
               </div>
             </div>
-          </div>
+          </BentoCard>
+        ))}
+      </BentoGrid>
 
-          {/* Testimonials Placeholder */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">{t('moreAbout.testimonials.title')}</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">JD</span>
-                  </div>
-                  <div>
-                    <p className="text-gray-300 mb-3 italic">
-                      {t('moreAbout.testimonials.testimonial1.text')}
-                    </p>
-                    <div>
-                      <p className="text-white font-medium">{t('moreAbout.testimonials.testimonial1.name')}</p>
-                      <p className="text-purple-400 text-sm">{t('moreAbout.testimonials.testimonial1.role')}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      {/* CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center"
+      >
+        <div className="bento-card bg-gradient-to-r from-primary/10 to-accent/10 border-primary/30 max-w-2xl mx-auto">
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+            {t('moreAbout.cta.title')}
+          </h3>
+          <p className="text-gray-400 mb-6 text-sm">
+            {t('moreAbout.cta.description')}
+          </p>
 
-              <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">AM</span>
-                  </div>
-                  <div>
-                    <p className="text-gray-300 mb-3 italic">
-                      {t('moreAbout.testimonials.testimonial2.text')}
-                    </p>
-                    <div>
-                      <p className="text-white font-medium">{t('moreAbout.testimonials.testimonial2.name')}</p>
-                      <p className="text-green-400 text-sm">{t('moreAbout.testimonials.testimonial2.role')}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <motion.button
+              onClick={() => scrollToSection('contact')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-primary flex items-center gap-2"
+            >
+              <MessageCircle size={18} />
+              <span>{t('moreAbout.cta.button')}</span>
+            </motion.button>
 
-          {/* Human CTA */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                {t('moreAbout.cta.title')}
-              </h3>
-              <p className="text-gray-300 mb-8 text-lg">
-                {t('moreAbout.cta.description')}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center space-x-3"
-                >
-                  <MessageCircle size={20} className="group-hover:animate-bounce" />
-                  <span>{t('moreAbout.cta.button')}</span>
-                </button>
-                
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Heart size={16} className="text-red-400" />
-                  <span className="text-sm">{t('moreAbout.cta.responseTime')}</span>
-                </div>
-              </div>
-            </div>
+            <span className="flex items-center gap-2 text-gray-500 text-sm">
+              <Heart size={14} className="text-red-400" />
+              <span>{t('moreAbout.cta.responseTime')}</span>
+            </span>
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </BentoSection>
   );
 };
 

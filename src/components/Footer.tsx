@@ -1,64 +1,72 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, ArrowUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const navLinks = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+  const techStack = ['React', 'TypeScript', 'Tailwind', 'Vite', 'Framer Motion'];
+
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 text-base md:text-lg">
-      <div className="container mx-auto px-6 py-16 md:py-20">
-        <div className="grid md:grid-cols-4 gap-12 md:gap-16">
+    <footer className="bg-bento-dark border-t border-bento-border">
+      <div className="container mx-auto px-4 md:px-6 py-12">
+        {/* Main Footer Content */}
+        <div className="grid md:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
-          <div className="space-y-6">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Martín Lucero
-            </div>
-            <p className="text-gray-400 text-base md:text-lg">
+          <div className="md:col-span-2 space-y-4">
+            <h2 className="text-2xl font-bold gradient-text">Martín Lucero</h2>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-md">
               {t('footer.description')}
             </p>
-            <div className="flex space-x-6">
+            <div className="flex gap-3">
               <a
                 href="mailto:martinolm1999@gmail.com"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="social-icon"
+                aria-label="Email"
               >
-                <Mail size={20} />
+                <Mail size={18} />
               </a>
               <a
                 href="https://github.com/tinchopps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="social-icon"
+                aria-label="GitHub"
               >
-                <Github size={20} />
+                <Github size={18} />
               </a>
               <a
                 href="https://linkedin.com/in/tinchopps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="social-icon"
+                aria-label="LinkedIn"
               >
-                <Linkedin size={20} />
+                <Linkedin size={18} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-6 md:mb-6 text-lg md:text-xl">{t('footer.quickLinks')}</h3>
-            <ul className="space-y-3">
-              {['home', 'about', 'experience', 'projects', 'skills'].map((item) => (
+            <h3 className="text-white font-semibold mb-4 text-sm">{t('footer.quickLinks')}</h3>
+            <ul className="space-y-2">
+              {navLinks.map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => scrollToSection(item)}
-                    className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-primary transition-colors text-sm"
                   >
                     {t(`nav.${item}`)}
                   </button>
@@ -67,29 +75,12 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Built With */}
           <div>
-            <h3 className="text-white font-semibold mb-6 md:mb-6 text-lg md:text-xl">{t('footer.contact')}</h3>
-            <ul className="space-y-3 text-base text-gray-400">
-              <li>General Rodríguez, Buenos Aires</li>
-              <li>Argentina</li>
-              <li>
-                <a href="mailto:martinolm1999@gmail.com" className="hover:text-purple-400 transition-colors">
-                  martinolm1999@gmail.com
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Technologies */}
-          <div>
-            <h3 className="text-white font-semibold mb-6 md:mb-6 text-lg md:text-xl">{t('footer.builtWith')}</h3>
-            <div className="flex flex-wrap gap-3">
-              {['React', 'TypeScript', 'Tailwind', 'Vite'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded border border-gray-700"
-                >
+            <h3 className="text-white font-semibold mb-4 text-sm">{t('footer.builtWith')}</h3>
+            <div className="flex flex-wrap gap-2">
+              {techStack.map((tech) => (
+                <span key={tech} className="tech-badge text-xs">
                   {tech}
                 </span>
               ))}
@@ -98,15 +89,26 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-gray-400 text-base md:text-lg">
-              © 2025 Martín Lucero. {t('footer.rights')}
+        <div className="border-t border-bento-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-gray-500 text-xs">
+            © 2025 Martín Lucero. {t('footer.rights')}
+          </p>
+
+          <div className="flex items-center gap-4">
+            <p className="text-gray-500 text-xs flex items-center gap-1">
+              {t('footer.built')}
+              <Heart size={12} className="text-red-400" />
             </p>
-            <p className="text-gray-400 text-base md:text-lg flex items-center space-x-2 mt-2 md:mt-0">   
-              <span>{t('footer.built')}</span>
-              <Heart size={18} className="text-red-400" />
-            </p>
+
+            <motion.button
+              onClick={scrollToTop}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="p-2 bg-bento-card border border-bento-border rounded-lg hover:border-primary hover:text-primary transition-colors text-gray-400"
+              aria-label="Scroll to top"
+            >
+              <ArrowUp size={16} />
+            </motion.button>
           </div>
         </div>
       </div>
