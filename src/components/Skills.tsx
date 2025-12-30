@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, Code, Database, Brain, Monitor, Wrench, Server, Layers } from 'lucide-react';
+import { Calendar, Code, Database, Brain, Wrench, Server, Layers } from 'lucide-react';
 import { BentoCard } from './BentoCard';
 import { BentoGrid, BentoSection } from './BentoGrid';
 
@@ -27,7 +27,7 @@ const Skills: React.FC = () => {
     { key: 'backend', icon: Server, label: t('skills.categories.backend'), gradient: 'from-green-500 to-emerald-500' },
     { key: 'database', icon: Database, label: t('skills.categories.database'), gradient: 'from-purple-500 to-pink-500' },
     { key: 'ai', icon: Brain, label: t('skills.categories.ai'), gradient: 'from-amber-500 to-orange-500' },
-    { key: 'devops', icon: Layers, label: 'DevOps', gradient: 'from-red-500 to-rose-500' },
+    { key: 'devops', icon: Layers, label: t('skills.categories.devops'), gradient: 'from-red-500 to-rose-500' },
     { key: 'tools', icon: Wrench, label: t('skills.categories.tools'), gradient: 'from-indigo-500 to-violet-500' }
   ];
 
@@ -67,8 +67,8 @@ const Skills: React.FC = () => {
               key={category.key}
               onClick={() => setActiveCategory(category.key)}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all ${isActive
-                  ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
-                  : 'bg-bento-card border border-bento-border text-gray-400 hover:text-white hover:border-primary/50'
+                ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
+                : 'bg-bento-card border border-bento-border text-gray-400 hover:text-white hover:border-primary/50'
                 }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}

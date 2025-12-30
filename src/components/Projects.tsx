@@ -22,10 +22,22 @@ const Projects: React.FC = () => {
     if (id.includes('ticket') || id.includes('support')) {
       return { icon: Code2, gradient: 'from-blue-500 to-cyan-500' };
     }
+    if (id.includes('qr') || id.includes('generator')) {
+      return { icon: Code2, gradient: 'from-emerald-500 to-teal-500' };
+    }
     return { icon: Globe, gradient: 'from-green-500 to-emerald-500' };
   };
 
   const projects = [
+    {
+      id: 'qr_generator',
+      image: '/qr_generator.png',
+      status: 'completed',
+      available: true,
+      externalUrl: 'https://tinchopps-qr.up.railway.app/',
+      githubUrl: 'https://github.com/tinchopps/QR_GENERATOR',
+      featured: true,
+    },
     {
       id: 'one_piece_quiz',
       image: '/op.png',
@@ -124,10 +136,10 @@ const Projects: React.FC = () => {
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4">
                     <span className={`px-2 py-1 text-xs font-medium rounded-full ${project.status === 'completed'
-                        ? 'bg-secondary/20 text-secondary border border-secondary/30'
-                        : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
+                      ? 'bg-secondary/20 text-secondary border border-secondary/30'
+                      : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
                       }`}>
-                      {project.status === 'completed' ? '✓ Live' : '⚡ WIP'}
+                      {project.status === 'completed' ? t('projects.status.live') : t('projects.status.wip')}
                     </span>
                   </div>
                 </div>

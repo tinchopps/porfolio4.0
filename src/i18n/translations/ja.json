@@ -10,11 +10,18 @@
   },
   "hero": {
     "greeting": "こんにちは、私は",
-    "role": "フルスタック開発者 | システム学生 | IT教育者",
+    "role": "フルスタック開発者 | IT教育者 | AI狂信者",
+    "roles": [
+      "フルスタック開発者",
+      "IT教育者",
+      "AI狂信者"
+    ],
     "location": "アルゼンチン、ブエノスアイレス、ヘネラル・ロドリゲス",
     "description": "技術、教育、継続的学習に情熱を注いでいます。革新的なソリューションを作成し、教育と開発を通じて知識を共有しています。",
     "cta": "連絡する",
-    "viewWork": "私の作品を見る"
+    "viewWork": "私の作品を見る",
+    "statusDescription": "新しい機会や興味深いプロジェクトにオープンです",
+    "connectHeader": "つながる"
   },
   "about": {
     "title": "私について",
@@ -38,8 +45,8 @@
           "description": "PythonとSQLによるデータのモデリング、可視化、分析。生成AI、GCP、BigQuery ML、スマートツールによる自動化。"
         },
         "seoMarketing": {
-          "title": "ITサポート＆テクノロジー教育",
-          "description": "技術的な問題解決、リモートサポート、個別指導。Git、VS Code、クラウドプラットフォーム、デジタル学習体験の設計などの技術を活用。"
+          "title": "ITサポート ＆ テクノロジー教育",
+          "description": "ハードウェアおよびソフトウェアのトラブルシューティング、ヘルプデスク管理のスペシャリスト。デジタルの教育学習と共同作業ツールの設計者。"
         }
       }
     },
@@ -73,6 +80,7 @@
     "cta": {
       "viewCV": "履歴書を見る"
     },
+    "natureBadge": "自然",
     "description": "私は意味のある技術ソリューションの創造に情熱を注ぐ、献身的なフルスタック開発者およびシステム工学の学生です。私の旅は、正式な教育とウェブ開発、人工知能、教育技術での実践的経験を組み合わせています。",
     "experience": "私の経験は、レスポンシブウェブアプリケーションの構築から学術機関向けのAI搭載チャットボットの開発まで幅広く及びます。技術が教育を変革する力を信じており、複雑な技術概念と実用的なアプリケーションの橋渡しをすることにコミットしています。",
     "teaching": "IT教育者として、プログラミングの基礎とウェブ開発を志望開発者に教える特権を得てきました。この経験は私のコミュニケーションスキルを向上させただけでなく、複数の視点から技術への理解を深めました。",
@@ -97,9 +105,18 @@
         "description": "フクロウと出会う―知恵と地域の動物とのつながりを象徴"
       }
     ],
-    "photoPanelLabels": ["写真", "枚中", "説明:"],
-    "photoPanelIcons": ["📍", "📅"],
-    "photoPanelHints": ["矢印ボタンをクリックして写真を切り替える"]
+    "photoPanelLabels": [
+      "写真",
+      "枚中",
+      "説明:"
+    ],
+    "photoPanelIcons": [
+      "📍",
+      "📅"
+    ],
+    "photoPanelHints": [
+      "矢印ボタンをクリックして写真を切り替える"
+    ]
   },
   "experience": {
     "title": "職歴",
@@ -130,7 +147,14 @@
           "専門家、アーティスト、学生向けインタラクティブウェブポートフォリオ",
           "ヘネラル・ロドリゲス保健局のデジタルプロセス最適化"
         ],
-        "skills": ["React", "Node.js", "JavaScript", "HTML/CSS", "UX/UIデザイン", "プロジェクト管理"]
+        "skills": [
+          "React",
+          "Node.js",
+          "JavaScript",
+          "HTML/CSS",
+          "UX/UIデザイン",
+          "プロジェクト管理"
+        ]
       },
       "interpreter": {
         "role": "バイリンガル通訳・コンテンツキュレーター",
@@ -144,7 +168,13 @@
           "言語的精度を持った繊細な会話の管理",
           "国際基準と納期の遵守"
         ],
-        "skills": ["バイリンガルコミュニケーション", "アクティブリスニング", "プレッシャー管理", "細部への注意", "リモートワーク"]
+        "skills": [
+          "バイリンガルコミュニケーション",
+          "アクティブリスニング",
+          "プレッシャー管理",
+          "細部への注意",
+          "リモートワーク"
+        ]
       },
       "educator": {
         "role": "技術教育者・メンター",
@@ -158,7 +188,13 @@
           "適応された教育コンテンツの開発",
           "実際のプロジェクトとベストプラクティスでの指導"
         ],
-        "skills": ["デジタル教育学", "Python", "データベース", "技術リーダーシップ", "効果的コミュニケーション"]
+        "skills": [
+          "デジタル教育学",
+          "Python",
+          "データベース",
+          "技術リーダーシップ",
+          "効果的コミュニケーション"
+        ]
       },
       "entrepreneur": {
         "role": "商業起業家",
@@ -172,7 +208,13 @@
           "在庫、価格設定、流通ロジスティクスの管理",
           "商業関係とアフターサービスの開発"
         ],
-        "skills": ["商業開発", "交渉", "在庫管理", "顧客サービス", "運営自律性"]
+        "skills": [
+          "商業開発",
+          "交渉",
+          "在庫管理",
+          "顧客サービス",
+          "運営自律性"
+        ]
       }
     }
   },
@@ -180,35 +222,117 @@
     "title": "注目プロジェクト",
     "viewProject": "プロジェクトを見る",
     "viewCode": "コードを見る",
+    "status": {
+      "live": "✓ ライブ",
+      "wip": "⚡ 進行中"
+    },
     "inProgressMessage": "このプロジェクトは再構築中です。変更が間もなく行われます。ありがとうございます！",
     "modalTitle": "プロジェクト更新",
     "items": {
+      "qr_generator": {
+        "title": "QR 生成器 – インタラクティブなフルスタック アプリケーション",
+        "description": "色、サイズ、およびオプションのロゴを使用してカスタマイズ可能な QR コード (PNG / SVG) を生成するためのプロフェッショナルなフルスタック アプリケーション。クリーンなアーキテクチャとテストを実証します。",
+        "tech": [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vite",
+          "Zustand",
+          "Lucide React"
+        ]
+      },
       "chatbot": {
         "title": "学術管理チャットボット",
         "description": "自然言語処理を使用して学術的な質問、コース情報、管理手続きで学生を支援するUNLu向けのAI搭載チャットボット。",
-        "tech": ["Python", "FastAPI", "OpenAI", "PostgreSQL", "Docker"]
+        "tech": [
+          "Python",
+          "FastAPI",
+          "OpenAI",
+          "PostgreSQL",
+          "Docker"
+        ]
       },
       "trivia": {
         "title": "ワンピーストリビアAPI",
         "description": "キャラクター情報、ストーリーアーク、インタラクティブクイズ機能を備えた包括的なワンピーストリビアのRESTful API。",
-        "tech": ["Node.js", "Express", "MongoDB", "JWT", "Swagger"]
+        "tech": [
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "JWT",
+          "Swagger"
+        ]
       },
       "ecommerce": {
         "title": "フルスタックEコマース",
         "description": "ユーザー認証、商品管理、ショッピングカート、決済統合を備えた完全なeコマースプラットフォーム。",
-        "tech": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"]
+        "tech": [
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "Stripe",
+          "AWS"
+        ]
       },
       "countdown": {
         "title": "ホジエファンページ",
         "description": "カウントダウンタイマー、ディスコグラフィー、ニュース更新、コミュニティ機能を備えたホジエファン向けのインタラクティブウェブサイト。",
-        "tech": ["React", "TypeScript", "Tailwind", "Firebase"],
+        "tech": [
+          "React",
+          "TypeScript",
+          "Tailwind",
+          "Firebase"
+        ],
         "externalUrl": "https://hoziercountdown.netlify.app/",
         "githubUrl": "https://github.com/tinchopps/hosierCountdown"
       },
       "portfolio": {
         "title": "個人ポートフォリオ",
         "description": "多言語サポートとモダンデザインで開発者としての私の作品、スキル、旅路を紹介するこのポートフォリオウェブサイト。",
-        "tech": ["React", "TypeScript", "Tailwind", "i18next", "Vite"]
+        "tech": [
+          "React",
+          "TypeScript",
+          "Tailwind",
+          "i18next",
+          "Vite"
+        ]
+      },
+      "one_piece_quiz": {
+        "title": "ワンピース トリビア (ウェブ クイズ)",
+        "description": "REST API バックエンドとレスポンシブなフロントエンドで構築された、ファンが知識をテストできるワンピースのブラウザベースのトリビア クイズ。",
+        "tech": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ]
+      },
+      "asistente_restaurante": {
+        "title": "レストラン アシスタント",
+        "description": "小規模ビジネス向けの注文管理を支援する、シンプルな UI とバックエンド自動化を備えたレストランの注文およびメニュー管理アシスタント。",
+        "tech": [
+          "Python",
+          "Flask",
+          "SQLite"
+        ]
+      },
+      "ticket_support": {
+        "title": "チケット サポート システム",
+        "description": "ユーザーの問題を追跡し、エージェントを割り当て、サポート リクエストのライフサイクルを管理するための軽量なチケット/サポート システム。",
+        "tech": [
+          "Node.js",
+          "Express",
+          "PostgreSQL"
+        ]
+      },
+      "bot_pedidos_whatsapp": {
+        "title": "WhatsApp 注文ボット",
+        "description": "メッセージを通じて注文を受け取り、顧客と対話するための WhatsApp ボット。小さなレストランやショップに役立ちます。",
+        "tech": [
+          "Python",
+          "Twilio",
+          "Flask"
+        ]
       }
     }
   },
@@ -219,6 +343,7 @@
       "backend": "バックエンド",
       "database": "データベース",
       "ai": "AIとデータ",
+      "devops": "DevOps",
       "tools": "ツールとその他"
     },
     "summary": [
@@ -233,7 +358,15 @@
           "institution": "CFP 401",
           "date": "2024",
           "duration": "9ヶ月",
-          "skills": ["HTML5", "CSS3", "JavaScript ES6+", "レスポンシブデザイン", "React", "PHP", "MySQL"],
+          "skills": [
+            "HTML5",
+            "CSS3",
+            "JavaScript ES6+",
+            "レスポンシブデザイン",
+            "React",
+            "PHP",
+            "MySQL"
+          ],
           "type": "specialization"
         },
         {
@@ -241,7 +374,14 @@
           "institution": "Digital House, Potrero Digital",
           "date": "2023",
           "duration": "4ヶ月",
-          "skills": ["React", "Redux", "Webpack", "SASS", "TypeScript", "Bootstrap"],
+          "skills": [
+            "React",
+            "Redux",
+            "Webpack",
+            "SASS",
+            "TypeScript",
+            "Bootstrap"
+          ],
           "type": "certification"
         },
         {
@@ -249,7 +389,12 @@
           "institution": "FreeCodeCamp",
           "date": "2022",
           "duration": "300時間",
-          "skills": ["CSS Grid", "Flexbox", "メディアクエリ", "アクセシビリティ"],
+          "skills": [
+            "CSS Grid",
+            "Flexbox",
+            "メディアクエリ",
+            "アクセシビリティ"
+          ],
           "type": "certification"
         },
         {
@@ -257,7 +402,11 @@
           "institution": "FreeCodeCamp",
           "date": "2022",
           "duration": "50時間",
-          "skills": ["Bootstrap 5", "コンポーネントシステム", "グリッドシステム"],
+          "skills": [
+            "Bootstrap 5",
+            "コンポーネントシステム",
+            "グリッドシステム"
+          ],
           "type": "certification"
         },
         {
@@ -265,7 +414,11 @@
           "institution": "SoloLearn",
           "date": "2022",
           "duration": "40時間",
-          "skills": ["ES6+", "DOM操作", "Async/Await"],
+          "skills": [
+            "ES6+",
+            "DOM操作",
+            "Async/Await"
+          ],
           "type": "certification"
         },
         {
@@ -273,7 +426,11 @@
           "institution": "SoloLearn",
           "date": "2022",
           "duration": "40時間",
-          "skills": ["ES6+", "DOM操作", "Async/Await"],
+          "skills": [
+            "ES6+",
+            "DOM操作",
+            "Async/Await"
+          ],
           "type": "certification"
         }
       ],
@@ -283,7 +440,12 @@
           "institution": "Digital House",
           "date": "2023",
           "duration": "3ヶ月",
-          "skills": ["Express.js", "REST API", "ミドルウェア", "認証"],
+          "skills": [
+            "Express.js",
+            "REST API",
+            "ミドルウェア",
+            "認証"
+          ],
           "type": "course"
         },
         {
@@ -291,7 +453,12 @@
           "institution": "Potrero Digital",
           "date": "2025",
           "duration": "4ヶ月",
-          "skills": ["PHP", "Laravel", "MySQL", "API"],
+          "skills": [
+            "PHP",
+            "Laravel",
+            "MySQL",
+            "API"
+          ],
           "type": "certification"
         },
         {
@@ -299,7 +466,12 @@
           "institution": "SoloLearn",
           "date": "2023",
           "duration": "90時間",
-          "skills": ["Python 3", "OOP", "ライブラリ", "データ構造"],
+          "skills": [
+            "Python 3",
+            "OOP",
+            "ライブラリ",
+            "データ構造"
+          ],
           "type": "certification"
         },
         {
@@ -307,7 +479,12 @@
           "institution": "FreeCodeCamp",
           "date": "2023",
           "duration": "300時間",
-          "skills": ["Node.js", "Express.js", "MongoDB", "API"],
+          "skills": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "API"
+          ],
           "type": "certification"
         },
         {
@@ -315,7 +492,11 @@
           "institution": "独学",
           "date": "2024",
           "duration": "個人プロジェクト",
-          "skills": ["FastAPI", "Pydantic", "非同期プログラミング"],
+          "skills": [
+            "FastAPI",
+            "Pydantic",
+            "非同期プログラミング"
+          ],
           "type": "project"
         }
       ],
@@ -325,7 +506,11 @@
           "institution": "Digital House",
           "date": "2023",
           "duration": "2ヶ月",
-          "skills": ["SQLクエリ", "データベース設計", "パフォーマンスチューニング"],
+          "skills": [
+            "SQLクエリ",
+            "データベース設計",
+            "パフォーマンスチューニング"
+          ],
           "type": "course"
         },
         {
@@ -333,7 +518,11 @@
           "institution": "SoloLearn",
           "date": "2023",
           "duration": "40時間",
-          "skills": ["NoSQL", "集約", "インデックス"],
+          "skills": [
+            "NoSQL",
+            "集約",
+            "インデックス"
+          ],
           "type": "certification"
         },
         {
@@ -341,7 +530,11 @@
           "institution": "FreeCodeCamp",
           "date": "2022",
           "duration": "100時間",
-          "skills": ["リレーショナル設計", "正規化", "複雑なクエリ"],
+          "skills": [
+            "リレーショナル設計",
+            "正規化",
+            "複雑なクエリ"
+          ],
           "type": "certification"
         },
         {
@@ -349,7 +542,11 @@
           "institution": "UNLuチャットボットプロジェクト",
           "date": "2024",
           "duration": "実践実装",
-          "skills": ["Firestore", "リアルタイムデータベース", "認証"],
+          "skills": [
+            "Firestore",
+            "リアルタイムデータベース",
+            "認証"
+          ],
           "type": "project"
         }
       ],
@@ -359,7 +556,12 @@
           "institution": "Google・デルタ国立大学",
           "date": "2024",
           "duration": "6ヶ月",
-          "skills": ["Gemini AI", "BigQuery", "GCP", "プロンプトエンジニアリング"],
+          "skills": [
+            "Gemini AI",
+            "BigQuery",
+            "GCP",
+            "プロンプトエンジニアリング"
+          ],
           "type": "diploma"
         },
         {
@@ -367,7 +569,11 @@
           "institution": "SoloLearn",
           "date": "2024",
           "duration": "9時間",
-          "skills": ["プロンプト設計", "AIモデル", "ユースケース"],
+          "skills": [
+            "プロンプト設計",
+            "AIモデル",
+            "ユースケース"
+          ],
           "type": "certification"
         },
         {
@@ -375,7 +581,11 @@
           "institution": "SoloLearn",
           "date": "2025",
           "duration": "20時間",
-          "skills": ["実験設計", "統計解析", "データ駆動意思決定"],
+          "skills": [
+            "実験設計",
+            "統計解析",
+            "データ駆動意思決定"
+          ],
           "type": "certification"
         },
         {
@@ -383,7 +593,12 @@
           "institution": "学術チャットボットプロジェクト",
           "date": "2024",
           "duration": "実践実装",
-          "skills": ["GPT-4", "埋め込み", "ファインチューニング", "RAG"],
+          "skills": [
+            "GPT-4",
+            "埋め込み",
+            "ファインチューニング",
+            "RAG"
+          ],
           "type": "project"
         },
         {
@@ -391,7 +606,12 @@
           "institution": "独学",
           "date": "2024",
           "duration": "継続学習",
-          "skills": ["NLTK", "spaCy", "テキスト分析", "感情分析"],
+          "skills": [
+            "NLTK",
+            "spaCy",
+            "テキスト分析",
+            "感情分析"
+          ],
           "type": "self-study"
         }
       ],
@@ -401,7 +621,11 @@
           "institution": "Digital House",
           "date": "2023",
           "duration": "1ヶ月",
-          "skills": ["Docker", "Docker Compose", "コンテナオーケストレーション"],
+          "skills": [
+            "Docker",
+            "Docker Compose",
+            "コンテナオーケストレーション"
+          ],
           "type": "course"
         },
         {
@@ -409,7 +633,12 @@
           "institution": "AWSトレーニング",
           "date": "2023",
           "duration": "30時間",
-          "skills": ["EC2", "S3", "Lambda", "CloudFormation"],
+          "skills": [
+            "EC2",
+            "S3",
+            "Lambda",
+            "CloudFormation"
+          ],
           "type": "certification"
         },
         {
@@ -417,7 +646,12 @@
           "institution": "FreeCodeCamp",
           "date": "2022",
           "duration": "20時間",
-          "skills": ["Git", "GitHub", "ブランチ", "コラボレーション"],
+          "skills": [
+            "Git",
+            "GitHub",
+            "ブランチ",
+            "コラボレーション"
+          ],
           "type": "certification"
         },
         {
@@ -425,7 +659,11 @@
           "institution": "個人プロジェクト",
           "date": "2024",
           "duration": "実践実装",
-          "skills": ["GitHub Actions", "自動テスト", "デプロイ"],
+          "skills": [
+            "GitHub Actions",
+            "自動テスト",
+            "デプロイ"
+          ],
           "type": "project"
         }
       ],
@@ -435,7 +673,12 @@
           "institution": "Potrero Digital & Cisco",
           "date": "2023",
           "duration": "4ヶ月",
-          "skills": ["ハードウェア", "ネットワーク", "トラブルシューティング", "ヘルプデスク"],
+          "skills": [
+            "ハードウェア",
+            "ネットワーク",
+            "トラブルシューティング",
+            "ヘルプデスク"
+          ],
           "type": "course"
         },
         {
@@ -443,7 +686,11 @@
           "institution": "国立政府",
           "date": "2022",
           "duration": "6ヶ月",
-          "skills": ["IT基礎", "プログラミングロジック", "メソドロジー"],
+          "skills": [
+            "IT基礎",
+            "プログラミングロジック",
+            "メソドロジー"
+          ],
           "type": "program"
         },
         {
@@ -451,7 +698,11 @@
           "institution": "プロフェッショナル利用",
           "date": "継続中",
           "duration": "主なツール",
-          "skills": ["拡張機能", "デバッグ", "Git統合"],
+          "skills": [
+            "拡張機能",
+            "デバッグ",
+            "Git統合"
+          ],
           "type": "tool"
         },
         {
@@ -459,7 +710,11 @@
           "institution": "プロフェッショナル利用",
           "date": "継続中",
           "duration": "APIテスト",
-          "skills": ["APIテスト", "コレクション", "自動化"],
+          "skills": [
+            "APIテスト",
+            "コレクション",
+            "自動化"
+          ],
           "type": "tool"
         },
         {
@@ -467,7 +722,11 @@
           "institution": "独学",
           "date": "2023",
           "duration": "UI/UXデザイン",
-          "skills": ["プロトタイピング", "コンポーネント設計", "コラボレーション"],
+          "skills": [
+            "プロトタイピング",
+            "コンポーネント設計",
+            "コラボレーション"
+          ],
           "type": "tool"
         }
       ]
@@ -552,5 +811,171 @@
   },
   "modal": {
     "gotIt": "了解しました"
+  },
+  "ai": {
+    "title": "人工知能 (Artificial Intelligence)",
+    "subtitle": "生成AIでテクノロジーの未来を探求する",
+    "terminal": {
+      "init": "> AIアシスタントを初期化中...",
+      "loading": "> Geminiの機能をロード中...",
+      "connecting": "> BigQuery MLに接続中...",
+      "ready": "> 準備完了！🚀",
+      "question": "AIプロジェクトについてもっと知りたいですか？",
+      "cta": "話しましょう"
+    },
+    "tools": {
+      "active": "有効",
+      "items": {
+        "gemini": {
+          "name": "Gemini AI",
+          "desc": "生成AIとLLM"
+        },
+        "bigquery": {
+          "name": "BigQuery ML",
+          "desc": "データ分析"
+        },
+        "googlecloud": {
+          "name": "Google Cloud",
+          "desc": "クラウドプラットフォーム"
+        },
+        "pythonml": {
+          "name": "Python ML",
+          "desc": "機械学習"
+        }
+      }
+    },
+    "diploma": {
+      "title": "AIディプロマ",
+      "desc": "生成AI、GCP、BigQuery MLのトレーニング"
+    },
+    "projects": {
+      "title": "AIプロジェクト",
+      "status": {
+        "completed": "✓ 完了",
+        "learning": "📚 学習中"
+      },
+      "chatbot": {
+        "title": "UNLu学術チャットボット",
+        "desc": "GPT-4とRAGを使用した学生向けAIアシスタント"
+      },
+      "restaurant": {
+        "title": "レストランボット",
+        "desc": "自然言語処理による注文自動化"
+      },
+      "sentiment": {
+        "title": "感情分析",
+        "desc": "spaCyとNLTKを使用したテキスト分析パイプライン"
+      }
+    }
+  },
+  "planets": {
+    "label": "今日の惑星:",
+    "factLabel": "ご存知でしたか？",
+    "getAnother": "別の知識を得る →",
+    "sun": {
+      "name": "太陽",
+      "facts": [
+        "太陽系全体の質量の99.8%を占めています。",
+        "光が太陽から地球に届くまでに約8.3分かかります。",
+        "表面温度は約5,500度です。",
+        "太陽は黄色の矮星で、約46億歳です。",
+        "中心部の温度は1,500万度に達します。",
+        "約73%の水素と25%のヘリウムで構成されています。",
+        "太陽の中には100万個の地球が入る大きさがあります。",
+        "赤道付近では約27日に1回自転しています。",
+        "太陽はほぼ完璧な球体です。",
+        "核融合によってエネルギーを生成しています。"
+      ]
+    },
+    "moon": {
+      "name": "月",
+      "facts": [
+        "地球唯一の自然衛星です。",
+        "月には大気がないため、風や天候がありません。",
+        "月面の足跡は何百万年もそのまま残ります。",
+        "月の重力は地球の約6分の1です。",
+        "月は常に同じ面を地球に向けています。",
+        "地球の海の潮汐を引き起こしています。",
+        "月の表面（主にクレーター）には氷が存在します。",
+        "太陽系で5番目に大きな衛星です。",
+        "月は地球への巨大衝突によって形成されたと考えられています。",
+        "重力が小さいため、月面では体重がずっと軽く感じられます。"
+      ]
+    },
+    "mars": {
+      "name": "火星",
+      "facts": [
+        "太陽系最大の火山、オリンポス山があります。",
+        "火星の1日は24時間37分です。",
+        "表面の酸化鉄（錆）により「赤い惑星」と呼ばれます。",
+        "フォボスとダイモスという2つの衛星があります。",
+        "地球に似た季節がありますが、期間は2倍長いです。",
+        "マリネリス峡谷は、アメリカ大陸と同じくらいの長さがあります。",
+        "大気の95%は二酸化炭素です。",
+        "数十億年前、火星の表面には液体の水がありました。",
+        "現在、NASAの複数の探査機が火星表面を調査しています。",
+        "大きさは地球の約半分です。"
+      ]
+    },
+    "mercury": {
+      "name": "水星",
+      "facts": [
+        "太陽系で最も小さい惑星です。",
+        "太陽に最も近い惑星です。",
+        "水星の1年は地球のわずか88日です。",
+        "地球に次いで2番目に密度の高い惑星です。",
+        "温度は昼間は430℃、夜間は-180℃に達します。",
+        "衛星も環もありません。",
+        "水星の1日は地球の約59日です。",
+        "厚い大気の代わりに、非常に薄い「外気圏」があります。",
+        "鉄の核が冷えるにつれて、惑星全体が収縮しています。",
+        "太陽に近いにもかかわらず、極地のクレーターには氷があります。"
+      ]
+    },
+    "jupiter": {
+      "name": "木星",
+      "facts": [
+        "太陽系最大の惑星です。",
+        "大赤斑は、数百年続いている巨大な嵐です。",
+        "95個の既知の衛星があります。",
+        "主に水素とヘリウムでできたガス巨大惑星です。",
+        "自転が非常に速く、1日はわずか10時間です。",
+        "非常に強力な磁場を持っています。",
+        "衛星ガニメデは太陽系最大の衛星です。",
+        "塵でできたかすかな環があります。",
+        "もし質量が80倍あれば、恒星になっていた可能性があります。",
+        "太陽系で最も強力なオーロラが発生します。"
+      ]
+    },
+    "venus": {
+      "name": "金星",
+      "facts": [
+        "太陽系で最も暑い惑星です。",
+        "多くの惑星とは逆方向に自転しています。",
+        "金星の1日は1年よりも長いです。",
+        "大気圧は地球の90倍もあります。",
+        "夜空で月に次いで2番目に明るい天体です。",
+        "衛星も環もありません。",
+        "大きさが似ているため、地球の双子と呼ばれます。",
+        "表面温度は鉛が溶けるほどの高温（465℃）です。",
+        "硫酸でできた雲に覆われています。",
+        "表面には数千の火山があります。"
+      ]
+    },
+    "saturn": {
+      "name": "土星",
+      "facts": [
+        "巨大で複雑な環のシステムで有名です。",
+        "非常に軽いため、巨大な海があれば水に浮きます。",
+        "少なくとも146個の衛星があります。",
+        "土星の1日は約10.7時間です。",
+        "環は何十億もの氷と岩의破片でできています。",
+        "最大の衛星タイタンには、厚い窒素の大気があります。",
+        "風速は時速1,800キロメートルに達することがあります。",
+        "北極には巨大な六角形の嵐があります。",
+        "太陽系で2番目に大きな惑星です。",
+        "主に水素とヘリウムでできたガス巨大惑星です。"
+      ]
+    }
   }
 }

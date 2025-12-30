@@ -10,11 +10,18 @@
   },
   "hero": {
     "greeting": "Hello, I'm",
-    "role": "Full Stack Developer | Systems Student | IT Educator",
+    "role": "Full Stack Developer | IT Educator | AI Enthusiast",
+    "roles": [
+      "Full Stack Developer",
+      "IT Educator",
+      "AI Enthusiast"
+    ],
     "location": "General Rodríguez, Buenos Aires, Argentina",
     "description": "Passionate about technology, education, and continuous learning. I create innovative solutions and share knowledge through teaching and development.",
     "cta": "Get in touch",
-    "viewWork": "View my work"
+    "viewWork": "View my work",
+    "statusDescription": "Open to new opportunities and interesting projects",
+    "connectHeader": "Connect"
   },
   "about": {
     "title": "About Me",
@@ -38,8 +45,8 @@
           "description": "Modeling, visualization, and data analysis with Python and SQL. Generative AI, GCP, BigQuery ML, and automation with smart tools."
         },
         "seoMarketing": {
-          "title": "IT Support & Technology Education",
-          "description": "Technical problem solving, remote assistance, and personalized training. Use of technologies like Git, VS Code, cloud platforms, and design of digital learning experiences."
+          "title": "IT Support & Tech Education",
+          "description": "Specialist in hardware and software troubleshooting, helpdesk management, and preventive maintenance. Designer of digital educational pathways and collaborative learning tools."
         }
       }
     },
@@ -73,6 +80,7 @@
     "cta": {
       "viewCV": "View my CV"
     },
+    "natureBadge": "Nature",
     "description": "I'm a dedicated full-stack developer and systems engineering student with a passion for creating meaningful technology solutions. My journey combines formal education with hands-on experience in web development, artificial intelligence, and educational technology.",
     "experience": "My experience spans from building responsive web applications to developing AI-powered chatbots for academic institutions. I believe in the power of technology to transform education and am committed to bridging the gap between complex technical concepts and practical applications.",
     "teaching": "As an IT educator, I've had the privilege of teaching programming fundamentals and web development to aspiring developers. This experience has not only enhanced my communication skills but also deepened my understanding of technology from multiple perspectives.",
@@ -97,9 +105,18 @@
         "description": "Meeting the owls, symbolizing wisdom and connection with local wildlife"
       }
     ],
-    "photoPanelLabels": ["Photo", "of", "Description:"],
-    "photoPanelIcons": ["📍", "📅"],
-    "photoPanelHints": ["Click the arrow button to cycle through photos"]
+    "photoPanelLabels": [
+      "Photo",
+      "of",
+      "Description:"
+    ],
+    "photoPanelIcons": [
+      "📍",
+      "📅"
+    ],
+    "photoPanelHints": [
+      "Click the arrow button to cycle through photos"
+    ]
   },
   "experience": {
     "title": "Professional Experience",
@@ -130,7 +147,14 @@
           "Interactive web portfolios for professionals, artists and students",
           "Digital process optimization for General Rodríguez Health Department"
         ],
-        "skills": ["React", "Node.js", "JavaScript", "HTML/CSS", "UX/UI Design", "Project Management"]
+        "skills": [
+          "React",
+          "Node.js",
+          "JavaScript",
+          "HTML/CSS",
+          "UX/UI Design",
+          "Project Management"
+        ]
       },
       "interpreter": {
         "role": "Bilingual Interpreter & Content Curator",
@@ -144,7 +168,13 @@
           "Management of sensitive conversations with linguistic precision",
           "Compliance with international standards and delivery deadlines"
         ],
-        "skills": ["Bilingual Communication", "Active Listening", "Pressure Management", "Attention to Detail", "Remote Work"]
+        "skills": [
+          "Bilingual Communication",
+          "Active Listening",
+          "Pressure Management",
+          "Attention to Detail",
+          "Remote Work"
+        ]
       },
       "educator": {
         "role": "Technology Educator & Mentor",
@@ -158,7 +188,13 @@
           "Development of adapted pedagogical content",
           "Guidance in real projects and best practices"
         ],
-        "skills": ["Digital Pedagogy", "Python", "Databases", "Technical Leadership", "Effective Communication"]
+        "skills": [
+          "Digital Pedagogy",
+          "Python",
+          "Databases",
+          "Technical Leadership",
+          "Effective Communication"
+        ]
       },
       "entrepreneur": {
         "role": "Commercial Entrepreneur",
@@ -172,7 +208,13 @@
           "Stock, pricing and distribution logistics management",
           "Development of commercial relationships and after-sales"
         ],
-        "skills": ["Commercial Development", "Negotiation", "Stock Management", "Customer Service", "Operational Autonomy"]
+        "skills": [
+          "Commercial Development",
+          "Negotiation",
+          "Stock Management",
+          "Customer Service",
+          "Operational Autonomy"
+        ]
       }
     }
   },
@@ -180,56 +222,117 @@
     "title": "Featured Projects",
     "viewProject": "View Project",
     "viewCode": "View Code",
+    "status": {
+      "live": "✓ Live",
+      "wip": "⚡ WIP"
+    },
     "inProgressMessage": "This project is being restructured. Changes coming soon. Thank you!",
     "modalTitle": "Project Update",
     "items": {
+      "qr_generator": {
+        "title": "QR Generator – Interactive Full-Stack Application",
+        "description": "Professional full-stack application for generating customizable QR codes (PNG / SVG) with colors, size, and optional logo. Demonstrates clean architecture and tests.",
+        "tech": [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vite",
+          "Zustand",
+          "Lucide React"
+        ]
+      },
       "chatbot": {
         "title": "Academic Management Chatbot",
         "description": "AI-powered chatbot for UNLu that assists students with academic queries, course information, and administrative procedures using natural language processing.",
-        "tech": ["Python", "FastAPI", "OpenAI", "PostgreSQL", "Docker"]
+        "tech": [
+          "Python",
+          "FastAPI",
+          "OpenAI",
+          "PostgreSQL",
+          "Docker"
+        ]
       },
       "trivia": {
         "title": "One Piece Trivia API",
         "description": "RESTful API featuring comprehensive One Piece trivia with character information, story arcs, and interactive quiz functionality.",
-        "tech": ["Node.js", "Express", "MongoDB", "JWT", "Swagger"]
+        "tech": [
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "JWT",
+          "Swagger"
+        ]
       },
       "ecommerce": {
         "title": "Full Stack Ecommerce",
         "description": "Complete e-commerce platform with user authentication, product management, shopping cart, and payment integration.",
-        "tech": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"]
+        "tech": [
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "Stripe",
+          "AWS"
+        ]
       },
       "countdown": {
         "title": "Hozier Countdown Fan Page",
         "description": "Interactive fan website featuring countdown timers, discography, news updates, and community features for Hozier fans.",
-        "tech": ["React", "TypeScript", "Tailwind", "Firebase"],
+        "tech": [
+          "React",
+          "TypeScript",
+          "Tailwind",
+          "Firebase"
+        ],
         "externalUrl": "https://hoziercountdown.netlify.app/",
         "githubUrl": "https://github.com/tinchopps/hosierCountdown"
       },
       "portfolio": {
         "title": "Personal Portfolio",
         "description": "This portfolio website showcasing my work, skills, and journey as a developer with multi-language support and modern design.",
-        "tech": ["React", "TypeScript", "Tailwind", "i18next", "Vite"]
-      }
-      ,
+        "tech": [
+          "React",
+          "TypeScript",
+          "Tailwind",
+          "i18next",
+          "Vite"
+        ]
+      },
       "one_piece_quiz": {
         "title": "One Piece Trivia (Web Quiz)",
         "description": "A browser-based trivia quiz about One Piece built with a REST API backend and a responsive frontend for fans to test their knowledge.",
-        "tech": ["React", "Node.js", "Express", "MongoDB"]
+        "tech": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ]
       },
       "asistente_restaurante": {
         "title": "Restaurant Assistant",
         "description": "A management assistant for restaurant orders and menus with a simple UI and backend automation to help small businesses manage orders.",
-        "tech": ["Python", "Flask", "SQLite"]
+        "tech": [
+          "Python",
+          "Flask",
+          "SQLite"
+        ]
       },
       "ticket_support": {
         "title": "Ticket Support System",
         "description": "A lightweight ticketing/support system to track user issues, assign agents and manage the lifecycle of support requests.",
-        "tech": ["Node.js", "Express", "PostgreSQL"]
+        "tech": [
+          "Node.js",
+          "Express",
+          "PostgreSQL"
+        ]
       },
       "bot_pedidos_whatsapp": {
         "title": "WhatsApp Order Bot",
         "description": "A WhatsApp bot to receive orders and interact with customers via messages, useful for small restaurants and shops.",
-        "tech": ["Python", "Twilio", "Flask"]
+        "tech": [
+          "Python",
+          "Twilio",
+          "Flask"
+        ]
       }
     }
   },
@@ -240,6 +343,7 @@
       "backend": "Backend",
       "database": "Databases",
       "ai": "AI & Data",
+      "devops": "DevOps",
       "tools": "Tools & Others"
     },
     "summary": [
@@ -254,7 +358,15 @@
           "institution": "CFP 401",
           "date": "2024",
           "duration": "9 months",
-          "skills": ["HTML5", "CSS3", "JavaScript ES6+", "Responsive Design", "React", "PHP", "MySQL"],
+          "skills": [
+            "HTML5",
+            "CSS3",
+            "JavaScript ES6+",
+            "Responsive Design",
+            "React",
+            "PHP",
+            "MySQL"
+          ],
           "type": "specialization"
         },
         {
@@ -262,7 +374,14 @@
           "institution": "Digital House, Potrero Digital",
           "date": "2023",
           "duration": "4 months",
-          "skills": ["React", "Redux", "Webpack", "SASS", "TypeScript", "Bootstrap"],
+          "skills": [
+            "React",
+            "Redux",
+            "Webpack",
+            "SASS",
+            "TypeScript",
+            "Bootstrap"
+          ],
           "type": "certification"
         },
         {
@@ -270,7 +389,12 @@
           "institution": "FreeCodeCamp",
           "date": "2022",
           "duration": "300 hours",
-          "skills": ["CSS Grid", "Flexbox", "Media Queries", "Accessibility"],
+          "skills": [
+            "CSS Grid",
+            "Flexbox",
+            "Media Queries",
+            "Accessibility"
+          ],
           "type": "certification"
         },
         {
@@ -278,7 +402,11 @@
           "institution": "FreeCodeCamp",
           "date": "2022",
           "duration": "50 hours",
-          "skills": ["Bootstrap 5", "Component System", "Grid System"],
+          "skills": [
+            "Bootstrap 5",
+            "Component System",
+            "Grid System"
+          ],
           "type": "certification"
         },
         {
@@ -286,7 +414,11 @@
           "institution": "SoloLearn",
           "date": "2022",
           "duration": "40 hours",
-          "skills": ["ES6+", "DOM Manipulation", "Async/Await"],
+          "skills": [
+            "ES6+",
+            "DOM Manipulation",
+            "Async/Await"
+          ],
           "type": "certification"
         },
         {
@@ -294,7 +426,11 @@
           "institution": "SoloLearn",
           "date": "2022",
           "duration": "40 hours",
-          "skills": ["ES6+", "DOM Manipulation", "Async/Await"],
+          "skills": [
+            "ES6+",
+            "DOM Manipulation",
+            "Async/Await"
+          ],
           "type": "certification"
         }
       ],
@@ -304,7 +440,12 @@
           "institution": "Digital House",
           "date": "2023",
           "duration": "3 months",
-          "skills": ["Express.js", "REST APIs", "Middleware", "Authentication"],
+          "skills": [
+            "Express.js",
+            "REST APIs",
+            "Middleware",
+            "Authentication"
+          ],
           "type": "course"
         },
         {
@@ -312,7 +453,12 @@
           "institution": "Potrero Digital",
           "date": "2025",
           "duration": "4 months",
-          "skills": ["PHP", "Laravel", "MySQL", "APIs"],
+          "skills": [
+            "PHP",
+            "Laravel",
+            "MySQL",
+            "APIs"
+          ],
           "type": "certification"
         },
         {
@@ -320,7 +466,12 @@
           "institution": "SoloLearn",
           "date": "2023",
           "duration": "90 hours",
-          "skills": ["Python 3", "OOP", "Libraries", "Data Structures"],
+          "skills": [
+            "Python 3",
+            "OOP",
+            "Libraries",
+            "Data Structures"
+          ],
           "type": "certification"
         },
         {
@@ -328,7 +479,12 @@
           "institution": "FreeCodeCamp",
           "date": "2023",
           "duration": "300 hours",
-          "skills": ["Node.js", "Express.js", "MongoDB", "APIs"],
+          "skills": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "APIs"
+          ],
           "type": "certification"
         },
         {
@@ -336,7 +492,11 @@
           "institution": "Self-taught",
           "date": "2024",
           "duration": "Personal project",
-          "skills": ["FastAPI", "Pydantic", "Async Programming"],
+          "skills": [
+            "FastAPI",
+            "Pydantic",
+            "Async Programming"
+          ],
           "type": "project"
         }
       ],
@@ -346,7 +506,11 @@
           "institution": "Digital House",
           "date": "2023",
           "duration": "2 months",
-          "skills": ["SQL Queries", "Database Design", "Performance Tuning"],
+          "skills": [
+            "SQL Queries",
+            "Database Design",
+            "Performance Tuning"
+          ],
           "type": "course"
         },
         {
@@ -354,7 +518,11 @@
           "institution": "SoloLearn",
           "date": "2023",
           "duration": "40 hours",
-          "skills": ["NoSQL", "Aggregation", "Indexing"],
+          "skills": [
+            "NoSQL",
+            "Aggregation",
+            "Indexing"
+          ],
           "type": "certification"
         },
         {
@@ -362,7 +530,11 @@
           "institution": "FreeCodeCamp",
           "date": "2022",
           "duration": "100 hours",
-          "skills": ["Relational Design", "Normalization", "Complex Queries"],
+          "skills": [
+            "Relational Design",
+            "Normalization",
+            "Complex Queries"
+          ],
           "type": "certification"
         },
         {
@@ -370,7 +542,11 @@
           "institution": "UNLu Chatbot Project",
           "date": "2024",
           "duration": "Practical implementation",
-          "skills": ["Firestore", "Real-time Database", "Authentication"],
+          "skills": [
+            "Firestore",
+            "Real-time Database",
+            "Authentication"
+          ],
           "type": "project"
         }
       ],
@@ -380,7 +556,12 @@
           "institution": "Google & Universidad Nacional del Delta",
           "date": "2024",
           "duration": "6 months",
-          "skills": ["Gemini AI", "BigQuery", "GCP", "Prompt Engineering"],
+          "skills": [
+            "Gemini AI",
+            "BigQuery",
+            "GCP",
+            "Prompt Engineering"
+          ],
           "type": "diploma"
         },
         {
@@ -388,7 +569,11 @@
           "institution": "SoloLearn",
           "date": "2024",
           "duration": "9 hours",
-          "skills": ["Prompt Design", "AI Models", "Use Cases"],
+          "skills": [
+            "Prompt Design",
+            "AI Models",
+            "Use Cases"
+          ],
           "type": "certification"
         },
         {
@@ -396,7 +581,11 @@
           "institution": "SoloLearn",
           "date": "2025",
           "duration": "20 hours",
-          "skills": ["Experiment Design", "Statistical Analysis", "Data-Driven Decisions"],
+          "skills": [
+            "Experiment Design",
+            "Statistical Analysis",
+            "Data-Driven Decisions"
+          ],
           "type": "certification"
         },
         {
@@ -404,7 +593,12 @@
           "institution": "Academic Chatbot Project",
           "date": "2024",
           "duration": "Practical implementation",
-          "skills": ["GPT-4", "Embeddings", "Fine-tuning", "RAG"],
+          "skills": [
+            "GPT-4",
+            "Embeddings",
+            "Fine-tuning",
+            "RAG"
+          ],
           "type": "project"
         },
         {
@@ -412,7 +606,12 @@
           "institution": "Self-taught",
           "date": "2024",
           "duration": "Ongoing study",
-          "skills": ["NLTK", "spaCy", "Text Analysis", "Sentiment Analysis"],
+          "skills": [
+            "NLTK",
+            "spaCy",
+            "Text Analysis",
+            "Sentiment Analysis"
+          ],
           "type": "self-study"
         }
       ],
@@ -422,7 +621,11 @@
           "institution": "Digital House",
           "date": "2023",
           "duration": "1 month",
-          "skills": ["Docker", "Docker Compose", "Container Orchestration"],
+          "skills": [
+            "Docker",
+            "Docker Compose",
+            "Container Orchestration"
+          ],
           "type": "course"
         },
         {
@@ -430,7 +633,12 @@
           "institution": "AWS Training",
           "date": "2023",
           "duration": "30 hours",
-          "skills": ["EC2", "S3", "Lambda", "CloudFormation"],
+          "skills": [
+            "EC2",
+            "S3",
+            "Lambda",
+            "CloudFormation"
+          ],
           "type": "certification"
         },
         {
@@ -438,7 +646,12 @@
           "institution": "FreeCodeCamp",
           "date": "2022",
           "duration": "20 hours",
-          "skills": ["Git", "GitHub", "Branching", "Collaboration"],
+          "skills": [
+            "Git",
+            "GitHub",
+            "Branching",
+            "Collaboration"
+          ],
           "type": "certification"
         },
         {
@@ -446,7 +659,11 @@
           "institution": "Personal Project",
           "date": "2024",
           "duration": "Practical implementation",
-          "skills": ["GitHub Actions", "Automated Testing", "Deployment"],
+          "skills": [
+            "GitHub Actions",
+            "Automated Testing",
+            "Deployment"
+          ],
           "type": "project"
         }
       ],
@@ -456,7 +673,12 @@
           "institution": "Potrero Digital & Cisco",
           "date": "2023",
           "duration": "4 months",
-          "skills": ["Hardware", "Networks", "Troubleshooting", "Help Desk"],
+          "skills": [
+            "Hardware",
+            "Networks",
+            "Troubleshooting",
+            "Help Desk"
+          ],
           "type": "course"
         },
         {
@@ -464,7 +686,11 @@
           "institution": "National Government",
           "date": "2022",
           "duration": "6 months",
-          "skills": ["IT Fundamentals", "Programming Logic", "Methodologies"],
+          "skills": [
+            "IT Fundamentals",
+            "Programming Logic",
+            "Methodologies"
+          ],
           "type": "program"
         },
         {
@@ -472,7 +698,11 @@
           "institution": "Professional use",
           "date": "Ongoing",
           "duration": "Main tool",
-          "skills": ["Extensions", "Debugging", "Git Integration"],
+          "skills": [
+            "Extensions",
+            "Debugging",
+            "Git Integration"
+          ],
           "type": "tool"
         },
         {
@@ -480,7 +710,11 @@
           "institution": "Professional use",
           "date": "Ongoing",
           "duration": "Testing APIs",
-          "skills": ["API Testing", "Collections", "Automation"],
+          "skills": [
+            "API Testing",
+            "Collections",
+            "Automation"
+          ],
           "type": "tool"
         },
         {
@@ -488,7 +722,11 @@
           "institution": "Self-taught",
           "date": "2023",
           "duration": "UI/UX Design",
-          "skills": ["Prototyping", "Component Design", "Collaboration"],
+          "skills": [
+            "Prototyping",
+            "Component Design",
+            "Collaboration"
+          ],
           "type": "tool"
         }
       ]
@@ -573,5 +811,171 @@
   },
   "modal": {
     "gotIt": "Got it"
+  },
+  "ai": {
+    "title": "Artificial Intelligence",
+    "subtitle": "Exploring the future of technology with Generative AI",
+    "terminal": {
+      "init": "> Initializing AI Assistant...",
+      "loading": "> Loading Gemini capabilities...",
+      "connecting": "> Connecting to BigQuery ML...",
+      "ready": "> Ready to assist! 🚀",
+      "question": "Want to learn more about my AI projects?",
+      "cta": "Let's talk"
+    },
+    "tools": {
+      "active": "Active",
+      "items": {
+        "gemini": {
+          "name": "Gemini AI",
+          "desc": "Generative AI & LLMs"
+        },
+        "bigquery": {
+          "name": "BigQuery ML",
+          "desc": "Data Analytics"
+        },
+        "googlecloud": {
+          "name": "Google Cloud",
+          "desc": "Cloud Platform"
+        },
+        "pythonml": {
+          "name": "Python ML",
+          "desc": "Machine Learning"
+        }
+      }
+    },
+    "diploma": {
+      "title": "AI Diploma",
+      "desc": "Training in Generative AI, GCP and BigQuery ML"
+    },
+    "projects": {
+      "title": "AI Projects",
+      "status": {
+        "completed": "✓ Done",
+        "learning": "📚 Learning"
+      },
+      "chatbot": {
+        "title": "UNLu Academic Chatbot",
+        "desc": "AI Assistant for student queries using GPT-4 and RAG"
+      },
+      "restaurant": {
+        "title": "Restaurant Bot",
+        "desc": "Order automation with natural language processing"
+      },
+      "sentiment": {
+        "title": "Sentiment Analysis",
+        "desc": "Text analysis pipeline with spaCy and NLTK"
+      }
+    }
+  },
+  "planets": {
+    "label": "Today's Planet:",
+    "factLabel": "Did you know?",
+    "getAnother": "Get another fact →",
+    "sun": {
+      "name": "Sun",
+      "facts": [
+        "It contains 99.8% of the total mass in the solar system.",
+        "Light takes about 8.3 minutes to travel from the Sun to Earth.",
+        "Its surface temperature is about 5,500 degrees Celsius.",
+        "The Sun is a yellow dwarf star, about 4.6 billion years old.",
+        "The core temperature reaches a staggering 15 million degrees Celsius.",
+        "It consists of about 73% hydrogen and 25% helium.",
+        "One million Earths could fit inside the Sun.",
+        "It rotates about once every 27 days at its equator.",
+        "The Sun is a nearly perfect sphere.",
+        "It generates energy through nuclear fusion in its core."
+      ]
+    },
+    "moon": {
+      "name": "Moon",
+      "facts": [
+        "It is Earth's only natural satellite.",
+        "The Moon has no atmosphere, meaning no wind or weather.",
+        "Footprints on the Moon will stay there for millions of years.",
+        "The Moon's gravity is about 1/6th of Earth's gravity.",
+        "The same side of the Moon always faces Earth.",
+        "It causes the tides in our oceans.",
+        "There is water ice on the Moon's surface, mostly in craters.",
+        "It is the fifth largest moon in the solar system.",
+        "The Moon was likely formed by a giant impact with Earth.",
+        "A person would weigh much less on the Moon due to lower gravity."
+      ]
+    },
+    "mars": {
+      "name": "Mars",
+      "facts": [
+        "Mars is home to Olympus Mons, the tallest volcano in the solar system.",
+        "A day on Mars is 24 hours and 37 minutes long.",
+        "It is known as the Red Planet due to iron oxide (rust) on its surface.",
+        "Mars has two moons: Phobos and Deimos.",
+        "It has seasons similar to Earth, but they last twice as long.",
+        "Valles Marineris is a canyon system on Mars as long as the USA.",
+        "Mars' atmosphere is 95% carbon dioxide.",
+        "Mars once had liquid water on its surface billions of years ago.",
+        "NASA currently has several rovers exploring the Martian surface.",
+        "It is about half the size of Earth."
+      ]
+    },
+    "mercury": {
+      "name": "Mercury",
+      "facts": [
+        "Mercury is the smallest planet in our solar system.",
+        "It is the closest planet to the Sun.",
+        "A year on Mercury is only 88 Earth days long.",
+        "Mercury is the second densest planet after Earth.",
+        "Temperatures range from 430°C by day to -180°C at night.",
+        "It has no moons and no rings.",
+        "One day on Mercury lasts about 59 Earth days.",
+        "It has a very thin 'exosphere' rather than a thick atmosphere.",
+        "It is shrinking as its iron core slowly cools.",
+        "Despite its proximity to the Sun, it has ice in polar craters."
+      ]
+    },
+    "jupiter": {
+      "name": "Jupiter",
+      "facts": [
+        "Jupiter is the largest planet in our solar system.",
+        "The Great Red Spot is a storm that has lasted for centuries.",
+        "Jupiter has 95 known moons.",
+        "It is a gas giant primarily made of hydrogen and helium.",
+        "Jupiter rotates once every 10 hours, the fastest in the solar system.",
+        "It has a very powerful magnetic field.",
+        "Its moon Ganymede is the largest moon in the solar system.",
+        "Jupiter has faint rings made of dust particles.",
+        "If Jupiter were 80 times more massive, it would be a star.",
+        "It has the strongest aurorae in the solar system."
+      ]
+    },
+    "venus": {
+      "name": "Venus",
+      "facts": [
+        "Venus is the hottest planet in our solar system.",
+        "Venus rotates in the opposite direction to most other planets.",
+        "A day on Venus is longer than its year.",
+        "Its atmospheric pressure is 90 times greater than Earth's.",
+        "Venus is the second brightest object in the night sky.",
+        "It has no moons and no rings.",
+        "Venus is often called Earth's twin due to its similar size.",
+        "The surface is hot enough to melt lead (465°C).",
+        "It has clouds made of sulfuric acid.",
+        "Venus has thousands of volcanoes on its surface."
+      ]
+    },
+    "saturn": {
+      "name": "Saturn",
+      "facts": [
+        "Saturn is famous for its massive and complex ring system.",
+        "It is so light it could float in water if there were an ocean big enough.",
+        "Saturn has at least 146 moons.",
+        "A day on Saturn is about 10.7 hours long.",
+        "The rings are made of billions of pieces of ice and rock.",
+        "Titan, its largest moon, has a thick nitrogen atmosphere.",
+        "Winds on Saturn can reach speeds of 1,800 kilometers per hour.",
+        "It has a giant hexagon-shaped storm at its North Pole.",
+        "Saturn is the second largest planet in our solar system.",
+        "It is a gas giant made mostly of hydrogen and helium."
+      ]
+    }
   }
 }

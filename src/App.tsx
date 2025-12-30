@@ -2,6 +2,7 @@ import './i18n';
 import { ThemeProvider } from './context/ThemeContext';
 import { BentoLayout } from './components/BentoGrid';
 import DynamicBackground from './components/DynamicBackground';
+import { FeedbackSystem } from './components/FeedbackSystem';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,13 +12,13 @@ import Skills from './components/Skills';
 import AISection from './components/AISection';
 import MoreAbout from './components/MoreAbout';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 
 function App() {
   return (
     <ThemeProvider>
-      <BentoLayout className="dark">
+      <BentoLayout className="text-gray-900 dark:text-white transition-colors duration-300">
         <DynamicBackground />
+        <FeedbackSystem />
         <Header />
         <main>
           <Hero />
@@ -29,7 +30,6 @@ function App() {
           <MoreAbout />
           <Contact />
         </main>
-        <Footer />
       </BentoLayout>
     </ThemeProvider>
   );

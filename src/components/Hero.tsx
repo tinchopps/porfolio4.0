@@ -8,12 +8,7 @@ import { BentoGrid, BentoBackground } from './BentoGrid';
 const Hero: React.FC = () => {
   const { t } = useTranslation();
   const [displayedRole, setDisplayedRole] = useState('');
-  const roles = [
-    'Full Stack Developer',
-    'IT Educator',
-    'AI Enthusiast',
-    'Systems Student',
-  ];
+  const roles = t('hero.roles', { returnObjects: true }) as string[];
   const [roleIndex, setRoleIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
@@ -175,14 +170,14 @@ const Hero: React.FC = () => {
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Open to new opportunities and interesting projects
+              {t('hero.statusDescription')}
             </p>
           </BentoCard>
 
           {/* Social Links Card */}
           <BentoCard delay={3} className="flex flex-col justify-center">
             <h4 className="text-sm font-medium text-gray-400 mb-4 uppercase tracking-wider">
-              Connect
+              {t('hero.connectHeader')}
             </h4>
             <div className="flex gap-3">
               <a
@@ -217,15 +212,15 @@ const Hero: React.FC = () => {
           <BentoCard size="wide" delay={4} className="flex items-center">
             <div className="grid grid-cols-3 gap-6 w-full text-center">
               <div>
-                <div className="text-3xl font-bold gradient-text">5+</div>
+                <div className="text-3xl font-bold gradient-text">6+</div>
                 <div className="text-sm text-gray-400 mt-1">{t('experience.stats.yearsExperience')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold gradient-text">10+</div>
+                <div className="text-3xl font-bold gradient-text">50+</div>
                 <div className="text-sm text-gray-400 mt-1">{t('experience.stats.projectsCompleted')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold gradient-text">4</div>
+                <div className="text-3xl font-bold gradient-text">4+</div>
                 <div className="text-sm text-gray-400 mt-1">{t('experience.stats.industriesSectors')}</div>
               </div>
             </div>

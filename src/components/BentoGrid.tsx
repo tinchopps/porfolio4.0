@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '../lib/utils';
+import { useTheme } from '../context/ThemeContext';
 
 interface BentoGridProps {
     children: React.ReactNode;
@@ -90,6 +91,8 @@ export function BentoLayout({ children, className }: BentoLayoutProps) {
 
 // Animated background decoration
 export function BentoBackground() {
+    const { theme } = useTheme();
+
     return (
         <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
             {/* Gradient orbs */}
@@ -101,8 +104,8 @@ export function BentoBackground() {
             <div
                 className="absolute inset-0 opacity-[0.02]"
                 style={{
-                    backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
+                    backgroundImage: `linear-gradient(${theme === 'dark' ? 'rgba(255,255,255,.1)' : 'rgba(0,0,0,.1)'} 1px, transparent 1px),
+                           linear-gradient(90deg, ${theme === 'dark' ? 'rgba(255,255,255,.1)' : 'rgba(0,0,0,.1)'} 1px, transparent 1px)`,
                     backgroundSize: '50px 50px',
                 }}
             />

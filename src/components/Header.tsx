@@ -40,8 +40,8 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-bento-dark/90 backdrop-blur-lg border-b border-bento-border'
-          : 'bg-transparent'
+        ? 'bg-bento-dark/90 backdrop-blur-lg border-b border-bento-border'
+        : 'bg-transparent'
         }`}
     >
       <nav className="container mx-auto px-4 md:px-6 py-3">
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="px-3 py-2 text-sm text-gray-400 hover:text-primary rounded-lg hover:bg-primary/10 transition-all"
+                className="px-3 py-2 text-sm text-gray-700 dark:text-gray-400 hover:text-primary rounded-lg hover:bg-primary/10 transition-all font-medium"
               >
                 {item === 'ai' ? 'AI' : t(`nav.${item}`)}
               </button>
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
               onClick={toggleTheme}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="p-2 text-gray-400 hover:text-primary rounded-lg hover:bg-primary/10 transition-all"
+              className="p-2 text-gray-700 dark:text-gray-400 hover:text-primary rounded-lg hover:bg-primary/10 transition-all"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
@@ -86,7 +86,7 @@ const Header: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setShowLangMenu(!showLangMenu)}
-                className="flex items-center gap-1.5 px-2 py-2 text-gray-400 hover:text-primary rounded-lg hover:bg-primary/10 transition-all"
+                className="flex items-center gap-1.5 px-2 py-2 text-gray-700 dark:text-gray-400 hover:text-primary rounded-lg hover:bg-primary/10 transition-all"
               >
                 <Globe size={18} />
                 <span className="text-xs font-medium">{i18n.language.toUpperCase()}</span>
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-400 hover:text-primary rounded-lg hover:bg-primary/10 transition-all"
+              className="md:hidden p-2 text-gray-700 dark:text-gray-400 hover:text-primary rounded-lg hover:bg-primary/10 transition-all"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={20} /> : <Menu size={20} />}

@@ -160,15 +160,15 @@ const Experience: React.FC = () => {
       >
         <BentoGrid columns={3}>
           <BentoCard delay={0} className="text-center">
-            <div className="text-4xl font-bold gradient-text mb-1">5+</div>
+            <div className="text-4xl font-bold gradient-text mb-1">6+</div>
             <div className="text-sm text-gray-400">{t('experience.stats.yearsExperience')}</div>
           </BentoCard>
           <BentoCard delay={1} className="text-center">
-            <div className="text-4xl font-bold gradient-text mb-1">15+</div>
+            <div className="text-4xl font-bold gradient-text mb-1">50+</div>
             <div className="text-sm text-gray-400">{t('experience.stats.projectsCompleted')}</div>
           </BentoCard>
           <BentoCard delay={2} className="text-center">
-            <div className="text-4xl font-bold gradient-text mb-1">4</div>
+            <div className="text-4xl font-bold gradient-text mb-1">4+</div>
             <div className="text-sm text-gray-400">{t('experience.stats.industriesSectors')}</div>
           </BentoCard>
         </BentoGrid>

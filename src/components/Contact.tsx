@@ -72,15 +72,15 @@ const Contact: React.FC = () => {
                 <info.icon size={22} className="text-white" />
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-1">{info.label}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">{info.label}</p>
                 {info.href ? (
-                  <a href={info.href} className="text-white hover:text-primary transition-colors font-medium">
+                  <a href={info.href} className="text-gray-900 dark:text-white hover:text-primary transition-colors font-medium">
                     {info.value}
                   </a>
                 ) : (
                   <div className="flex items-center gap-2">
                     {info.isStatus && <span className="status-dot status-dot-available" />}
-                    <span className="text-white font-medium">{info.value}</span>
+                    <span className="text-gray-900 dark:text-white font-medium">{info.value}</span>
                   </div>
                 )}
               </div>
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
 
         {/* Social Links Card */}
         <BentoCard delay={3}>
-          <h4 className="text-sm font-semibold text-gray-400 mb-4">{t('contact.connectWithMe')}</h4>
+          <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-400 mb-4">{t('contact.connectWithMe')}</h4>
           <div className="flex gap-3">
             <a
               href="https://github.com/tinchopps"
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
         <BentoCard size="wide" delay={4} hover={false}>
           <div className="flex items-center gap-3 mb-6">
             <MessageSquare className="text-primary" size={24} />
-            <h3 className="text-xl font-bold text-white">{t('contact.sendMessage')}</h3>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t('contact.sendMessage')}</h3>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-bento-dark border border-bento-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
+                className="w-full px-4 py-3 bg-white dark:bg-bento-dark border border-gray-200 dark:border-bento-border rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
               />
               <input
                 type="email"
@@ -138,7 +138,7 @@ const Contact: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-bento-dark border border-bento-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
+                className="w-full px-4 py-3 bg-white dark:bg-bento-dark border border-gray-200 dark:border-bento-border rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
               />
             </div>
 
@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-bento-dark border border-bento-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
+              className="w-full px-4 py-3 bg-white dark:bg-bento-dark border border-gray-200 dark:border-bento-border rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
             />
 
             <textarea
@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               required
               rows={4}
-              className="w-full px-4 py-3 bg-bento-dark border border-bento-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all resize-none"
+              className="w-full px-4 py-3 bg-white dark:bg-bento-dark border border-gray-200 dark:border-bento-border rounded-xl text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all resize-none"
             />
 
             <motion.button

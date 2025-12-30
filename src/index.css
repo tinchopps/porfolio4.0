@@ -30,11 +30,26 @@
   }
 
   .light .bento-card {
-    @apply bg-white border-gray-200 shadow-sm;
+    @apply bg-white border-gray-300 shadow-md text-gray-900;
+  }
+
+  .light .bento-card h1,
+  .light .bento-card h2,
+  .light .bento-card h3,
+  .light .bento-card h4,
+  .light .bento-card h5,
+  .light .bento-card .text-white {
+    @apply text-gray-900 !important;
+  }
+
+  .light .bento-card p,
+  .light .bento-card .text-gray-400,
+  .light .bento-card .text-gray-300 {
+    @apply text-gray-700 !important;
   }
 
   .light .bento-card:hover {
-    @apply bg-gray-50 border-gray-300;
+    @apply bg-gray-50 border-gray-400 shadow-lg;
   }
 }
 
@@ -89,12 +104,20 @@
     @apply p-3 bg-bento-card border border-bento-border rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-200 cursor-pointer;
   }
 
+  .light .social-icon {
+    @apply bg-gray-100 border-gray-200;
+  }
+
   .social-icon:hover svg {
     @apply text-primary;
   }
 
   .social-icon svg {
     @apply text-gray-400 transition-colors;
+  }
+
+  .light .social-icon svg {
+    @apply text-gray-600;
   }
 
 
@@ -104,7 +127,20 @@
   }
 
   .section-subtitle {
-    @apply text-gray-400 text-lg;
+    @apply text-gray-400 text-lg transition-colors duration-300;
+  }
+
+  .light .section-subtitle {
+    @apply text-gray-600;
+  }
+
+  /* Global utility overrides for light mode */
+  .light .text-gray-400 {
+    @apply text-gray-600 !important;
+  }
+
+  .light .text-gray-300 {
+    @apply text-gray-700 !important;
   }
 
   /* Tech Badge */

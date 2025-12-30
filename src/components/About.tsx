@@ -150,7 +150,7 @@ const About: React.FC = () => {
             {/* Nature badge */}
             <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-secondary/20 backdrop-blur-sm rounded-full border border-secondary/30">
               <Leaf size={14} className="text-secondary" />
-              <span className="text-xs text-secondary font-medium">Nature</span>
+              <span className="text-xs text-secondary font-medium">{t('about.natureBadge')}</span>
             </div>
 
             {/* Info Panel */}
