@@ -27,9 +27,23 @@ const Header: React.FC = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
+
+    // Small timeout to allow the menu closing animation to start 
+    // and prevent potential disruptions to smooth scrolling
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
   };
 
   const changeLanguage = (langCode: string) => {
@@ -40,7 +54,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-bento-dark/90 backdrop-blur-lg border-b border-bento-border'
+        ? 'bg-white/90 dark:bg-bento-dark/90 backdrop-blur-lg border-b border-bento-border'
         : 'bg-transparent'
         }`}
     >
@@ -98,13 +112,13 @@ const Header: React.FC = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full right-0 mt-2 bg-bento-card border border-bento-border rounded-xl overflow-hidden shadow-xl min-w-[140px]"
+                    className="absolute top-full right-0 mt-2 bg-white dark:bg-bento-card border border-bento-border rounded-xl overflow-hidden shadow-xl min-w-[140px]"
                   >
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
                         onClick={() => changeLanguage(lang.code)}
-                        className={`flex items-center gap-2 w-full px-4 py-2.5 text-sm hover:bg-bento-card-hover transition-colors ${i18n.language === lang.code ? 'text-primary bg-primary/10' : 'text-gray-300'
+                        className={`flex items-center gap-2 w-full px-4 py-2.5 text-sm hover:bg-gray-100 dark:hover:bg-bento-card-hover transition-colors ${i18n.language === lang.code ? 'text-primary bg-primary/10' : 'text-gray-700 dark:text-gray-300'
                           }`}
                       >
                         <span>{lang.flag}</span>
@@ -134,7 +148,7 @@ const Header: React.FC = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 bg-bento-card border border-bento-border rounded-xl overflow-hidden"
+              className="md:hidden mt-4 bg-white dark:bg-bento-card border border-bento-border rounded-xl overflow-hidden shadow-lg"
             >
               {navItems.map((item, index) => (
                 <motion.button
@@ -143,7 +157,7 @@ const Header: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
                   onClick={() => scrollToSection(item)}
-                  className="block w-full px-4 py-3 text-left text-gray-300 hover:text-primary hover:bg-bento-card-hover transition-colors border-b border-bento-border last:border-b-0"
+                  className="block w-full px-4 py-3 text-left text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-100 dark:hover:bg-bento-card-hover transition-colors border-b border-bento-border last:border-b-0 font-medium"
                 >
                   {item === 'ai' ? 'AI' : t(`nav.${item}`)}
                 </motion.button>
