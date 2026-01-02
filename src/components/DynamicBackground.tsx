@@ -7,44 +7,44 @@ import { Sparkles, X, Info } from 'lucide-react';
 // NASA/ESA public domain images optimized for backgrounds
 const planetBackgrounds = {
     0: {
-        dark: 'https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=1920&q=80',
-        light: 'https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700?w=1920&q=80',
+        dark: '/assets/backgrounds/sun_dark.jpg',
+        light: '/assets/backgrounds/sun_light.jpg',
         key: 'sun',
         emoji: '☀️'
     },
     1: {
-        dark: 'https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?w=1920&q=80',
-        light: 'https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?w=1920&q=80',
+        dark: '/assets/backgrounds/moon_dark.jpg',
+        light: '/assets/backgrounds/moon_light.jpg',
         key: 'moon',
         emoji: '🌙'
     },
     2: {
-        dark: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=1920&q=80',
-        light: 'https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?w=1920&q=80',
+        dark: '/assets/backgrounds/mars_dark.jpg',
+        light: '/assets/backgrounds/mars_light.jpg',
         key: 'mars',
         emoji: '🔴'
     },
     3: {
-        dark: 'https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=1920&q=80',
-        light: 'https://images.unsplash.com/photo-1639921884918-8d28ab2e39a4?w=1920&q=80',
+        dark: '/assets/backgrounds/mercury_dark.jpg',
+        light: '/assets/backgrounds/mercury_light.jpg',
         key: 'mercury',
         emoji: '☿️'
     },
     4: {
-        dark: 'https://images.unsplash.com/photo-1614732484003-ef9881c53c14?w=1920&q=80',
-        light: 'https://images.unsplash.com/photo-1630839437035-dac17da580d0?w=1920&q=80',
+        dark: '/assets/backgrounds/jupiter_dark.jpg',
+        light: '/assets/backgrounds/jupiter_light.jpg',
         key: 'jupiter',
         emoji: '🪐'
     },
     5: {
-        dark: 'https://images.unsplash.com/photo-1614314107768-6018061b5b72?w=1920&q=80',
-        light: 'https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=1920&q=80',
+        dark: '/assets/backgrounds/venus_dark.jpg',
+        light: '/assets/backgrounds/venus_lightv2.jpg',
         key: 'venus',
         emoji: '♀️'
     },
     6: {
-        dark: 'https://images.unsplash.com/photo-1614732484230-9d55c3c4e2e6?w=1920&q=80',
-        light: 'https://images.unsplash.com/photo-1639921884918-8d28ab2e39a4?w=1920&q=80',
+        dark: '/assets/backgrounds/saturn_dark.jpg',
+        light: '/assets/backgrounds/saturn_light.jpg',
         key: 'saturn',
         emoji: '🪐'
     }
@@ -61,8 +61,10 @@ export function DynamicBackground() {
 
     const { backgroundUrl, planetName, emoji, facts } = useMemo(() => {
         const planetKey = planetConfig.key;
+        const bgUrl = theme === 'dark' ? planetConfig.dark : planetConfig.light;
+
         return {
-            backgroundUrl: theme === 'dark' ? planetConfig.dark : planetConfig.light,
+            backgroundUrl: bgUrl,
             planetName: t(`planets.${planetKey}.name`),
             emoji: planetConfig.emoji,
             facts: t(`planets.${planetKey}.facts`, { returnObjects: true }) as string[]
@@ -84,14 +86,13 @@ export function DynamicBackground() {
                     backgroundImage: `url(${backgroundUrl})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
                 }}
             />
 
             {/* Overlays */}
-            {/* Overlays - Adjusted for better planet visibility */}
-            <div className={`fixed inset-0 -z-10 transition-all duration-500 ${theme === 'dark' ? 'bg-black/30' : 'bg-white/10'}`} />
-            <div className={`fixed inset-0 -z-10 ${theme === 'dark' ? 'bg-gradient-to-b from-transparent via-bento-dark/20 to-bento-dark/80' : 'bg-gradient-to-b from-transparent via-white/10 to-white/60'}`} />
+            {/* Overlays - Softened to preserve background definition */}
+            <div className={`fixed inset-0 -z-10 transition-all duration-500 ${theme === 'dark' ? 'bg-black/20' : 'bg-white/10'}`} />
+            <div className={`fixed inset-0 -z-10 ${theme === 'dark' ? 'bg-gradient-to-b from-transparent via-bento-dark/10 to-bento-dark/80' : 'bg-gradient-to-b from-transparent via-white/10 to-white/60'}`} />
 
             {/* Planet facts toggle */}
             <AnimatePresence>
