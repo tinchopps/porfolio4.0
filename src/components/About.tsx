@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Monitor, TrendingUp, Calendar, ExternalLink,
+  Monitor, TrendingUp, Calendar,
   ChevronRight, Info, X, GraduationCap, Leaf, Brain
 } from 'lucide-react';
 import { BentoCard, BentoCardHeader, BentoCardContent } from './BentoCard';
@@ -244,23 +244,7 @@ const About: React.FC = () => {
         </BentoGrid>
       </motion.div>
 
-      {/* CV CTA */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-center"
-      >
-        <a
-          href="https://www.canva.com/design/DAGaIcXyFOk/EEEP-P69hocoVdRLNqCgWA/view"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary inline-flex items-center gap-2"
-        >
-          <span>{t('about.cta.viewCV')}</span>
-          <ExternalLink size={18} />
-        </a>
-      </motion.div>
+
     </BentoSection>
   );
 };
